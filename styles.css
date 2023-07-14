@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
     margin: 0;
     padding: 0;
+    padding-bottom: 60px; /* Adjust this value to match the height of your footer */
     font-family: 'Rubik', sans-serif;
 }
 
@@ -171,11 +176,12 @@ footer {
     background-color: #f8f9fa;
     text-align: center;
     padding: 20px;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
 }
+
 
 @keyframes preSlideIn {
     0% { top: -100px; }
