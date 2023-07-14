@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background-image: 
+    linear-gradient(
+        rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
+        rgba(0, 0, 255, 0.7)
+    );
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: preSlideIn 1s forwards, slideIn 1s 1s forwards;
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between logo and navigation */
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    height: 70px; 
+    width: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Display items in a row */
+}
+
+nav ul li {
+    display: inline-block; /* Displays list items on the same line */
+    margin-right: 20px; /* Adds some space between the links */
+}
+
+nav ul li a {
+    color: white; /* Makes the text white */
+    text-decoration: none; /* Removes the underline */
+}
+
+nav ul li a.contact-button {
+    padding: 10px 20px; /* Adds some padding to make the link look like a button */
+    background-color: tomato; /* Changes the background color */
+    color: white; /* Makes the text white */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s; /* Adds a transition effect when hovering over the button */
+}
+
+nav ul li a.contact-button:hover {
+    background-color: darkorange; /* Changes the background color on hover */
+}
+
+
+
+
+#hero-image {
+    position: relative;
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
+            rgba(0, 0, 255, 0.7)
+        ),
+        url('pharmacy1.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 0; 
+}
+
+header h1 {
+    color: orange;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.service-image-container {
+    width: 40%;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.service-text-container {
+    width: 60%;
+    padding-left: 20px;
+    text-align: left; /* Align the text to the left */
+}
+
+#services {
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 3em;
+}
+
+#products {
+    text-align: center;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 255, 0.7),
+            rgba(0, 0, 255, 0.7)
+        );
+    padding: 20px;
+    color: white;
+}
+
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-text-container {
+    width: 50%;
+    text-align: left;
+}
+
+#products h2 {
+    font-size: 3em;
+}
+
+.product-image-container {
+    width: 50%;
+}
+
+.product-image {
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes preSlideIn {
+    0% { top: -100px; }
+    100% { top: -50px; }
+}
+
+@keyframes slideIn {
+    0% { top: -50px; }
+    100% { top: 0; }
+}
