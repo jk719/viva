@@ -1,5 +1,3 @@
-/* Common Styles for all devices */
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 html {
@@ -17,7 +15,7 @@ body {
 header {
     background-image: 
     linear-gradient(
-        rgba(0, 0, 255, 0.7),
+        rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
         rgba(0, 0, 255, 0.7)
     );
     padding: 10px;
@@ -27,7 +25,7 @@ header {
     width: 100%;
     animation: preSlideIn 1s forwards, slideIn 1s 1s forwards;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distributes space evenly between logo and navigation */
     align-items: center;
     z-index: 1000;
 }
@@ -39,45 +37,40 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Display items in a row */
+    flex-wrap: wrap; /* Wrap items to the next line when needed */
+    justify-content: center; /* Center the items horizontally */
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-right: 20px; /* Adds some space between the links */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Makes the text white */
+    text-decoration: none; /* Removes the underline */
 }
 
 nav ul li a.contact-button {
-    padding: 10px 20px;
-    background-color: tomato;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* Adds some padding to make the link look like a button */
+    background-color: tomato; /* Changes the background color */
+    color: white; /* Makes the text white */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s; /* Adds a transition effect when hovering over the button */
 }
 
 nav ul li a.contact-button:hover {
-    background-color: darkorange;
+    background-color: darkorange; /* Changes the background color on hover */
 }
 
 #hero-image {
     position: relative;
     background-image: 
         linear-gradient(
-            rgba(0, 0, 255, 0.7),
+            rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
             rgba(0, 0, 255, 0.7)
         ),
         url('pharmacy1.png');
@@ -106,24 +99,22 @@ header h1 {
 
 .service-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .service-image-container {
-    width: 100%;
+    width: 40%;
 }
 
 .service-image {
     width: 100%;
-    height: auto; /* Adjust height as needed */
 }
 
 .service-text-container {
-    width: 100%;
-    padding: 20px;
-    text-align: left;
+    width: 60%;
+    padding-left: 20px;
 }
 
 #services {
@@ -147,15 +138,14 @@ header h1 {
 
 .product-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .product-text-container {
-    width: 100%;
-    padding: 20px;
-    text-align: left;
+    width: 50%;
+    padding-right: 20px;
 }
 
 #products h2 {
@@ -163,12 +153,11 @@ header h1 {
 }
 
 .product-image-container {
-    width: 100%;
+    width: 50%;
 }
 
 .product-image {
     width: 100%;
-    height: auto; /* Adjust height as needed */
 }
 
 section {
@@ -185,69 +174,47 @@ footer {
     width: 100%;
 }
 
-/* Media Query for iPhones */
-@media only screen and (max-device-width: 480px) {
-    /* Modify Styles for iPhones */
+@keyframes preSlideIn {
+    0% { top: -100px; }
+    100% { top: -50px; }
+}
 
+@keyframes slideIn {
+    0% { top: -50px; }
+    100% { top: 0; }
+}
+
+/* Additional CSS for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
     header {
-        padding: 10px 20px; /* Adjust padding for a more compact header */
-    }
-
-    .logo {
-        height: 50px;
-        width: auto;
-        margin-right: 10px;
+        padding: 5px;
     }
 
     nav ul {
-        display: none;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center the items horizontally */
     }
 
-    nav i.fa-bars {
-        display: block;
-        font-size: 24px;
-        margin-right: 10px;
-        cursor: pointer;
+    nav ul li {
+        margin-right: 0; /* Remove the right margin */
+        margin-bottom: 10px; /* Add some spacing between the links */
     }
 
-    nav ul.show {
-        display: block;
-        margin-top: 10px;
-    }
-
-    nav ul.show li {
-        margin: 10px 0;
-    }
-
-    nav ul.show li a {
-        color: white;
-    }
-
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-text-container {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    #products {
-        padding: 20px;
-        color: white;
-        text-align: center;
-    }
-
+    .service-container,
     .product-container {
         flex-direction: column;
-        align-items: center;
     }
 
+    .service-image-container,
+    .product-image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .service-text-container,
     .product-text-container {
         width: 100%;
-        padding: 20px;
-        text-align: center;
+        padding: 0;
     }
 }
