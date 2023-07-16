@@ -1,4 +1,7 @@
+/* Common Styles for all devices */
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 html {
     position: relative;
     min-height: 100%;
@@ -14,7 +17,7 @@ body {
 header {
     background-image: 
     linear-gradient(
-        rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
+        rgba(0, 0, 255, 0.7),
         rgba(0, 0, 255, 0.7)
     );
     padding: 10px;
@@ -24,7 +27,7 @@ header {
     width: 100%;
     animation: preSlideIn 1s forwards, slideIn 1s 1s forwards;
     display: flex;
-    justify-content: space-between; /* Distributes space evenly between logo and navigation */
+    justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
@@ -36,48 +39,45 @@ header {
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points from the list */
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points from the list */
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
-    display: flex; /* Display items in a row */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block; /* Displays list items on the same line */
-    margin-right: 20px; /* Adds some space between the links */
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white; /* Makes the text white */
-    text-decoration: none; /* Removes the underline */
+    color: white;
+    text-decoration: none;
 }
 
 nav ul li a.contact-button {
-    padding: 10px 20px; /* Adds some padding to make the link look like a button */
-    background-color: tomato; /* Changes the background color */
-    color: white; /* Makes the text white */
-    border-radius: 5px; /* Rounds the corners of the button */
-    transition: background-color 0.3s; /* Adds a transition effect when hovering over the button */
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a.contact-button:hover {
-    background-color: darkorange; /* Changes the background color on hover */
+    background-color: darkorange;
 }
-
-
-
 
 #hero-image {
     position: relative;
     background-image: 
         linear-gradient(
-            rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
+            rgba(0, 0, 255, 0.7),
             rgba(0, 0, 255, 0.7)
         ),
         url('pharmacy1.png');
@@ -106,22 +106,24 @@ header h1 {
 
 .service-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .service-image-container {
-    width: 40%;
+    width: 100%;
 }
 
 .service-image {
     width: 100%;
+    height: auto; /* Adjust height as needed */
 }
 
 .service-text-container {
-    width: 60%;
-    padding-left: 20px;
-    text-align: left; /* Align the text to the left */
+    width: 100%;
+    padding: 20px;
+    text-align: left;
 }
 
 #services {
@@ -143,16 +145,16 @@ header h1 {
     color: white;
 }
 
-
 .product-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .product-text-container {
-    width: 50%;
+    width: 100%;
+    padding: 20px;
     text-align: left;
 }
 
@@ -161,11 +163,12 @@ header h1 {
 }
 
 .product-image-container {
-    width: 50%;
+    width: 100%;
 }
 
 .product-image {
     width: 100%;
+    height: auto; /* Adjust height as needed */
 }
 
 section {
@@ -182,13 +185,69 @@ footer {
     width: 100%;
 }
 
+/* Media Query for iPhones */
+@media only screen and (max-device-width: 480px) {
+    /* Modify Styles for iPhones */
 
-@keyframes preSlideIn {
-    0% { top: -100px; }
-    100% { top: -50px; }
-}
+    header {
+        padding: 10px 20px; /* Adjust padding for a more compact header */
+    }
 
-@keyframes slideIn {
-    0% { top: -50px; }
-    100% { top: 0; }
+    .logo {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav i.fa-bars {
+        display: block;
+        font-size: 24px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    nav ul.show {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav ul.show li {
+        margin: 10px 0;
+    }
+
+    nav ul.show li a {
+        color: white;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-text-container {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #products {
+        padding: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-text-container {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
 }
