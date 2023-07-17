@@ -6,18 +6,28 @@ html {
 }
 
 body {
+    display: grid;
+    grid-template-rows: auto; 
     margin: 0;
     padding: 0;
-    padding-bottom: 60px; /* Adjust this value to match the height of your footer */
+    padding-bottom: 60px; 
     font-family: 'Rubik', sans-serif;
 }
 
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
 header {
-    background-image: 
-    linear-gradient(
-        rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
-        rgba(0, 0, 255, 0.7)
-    );
+    background-image: linear-gradient(rgba(0, 0, 255, 0.7), rgba(0, 0, 255, 0.7));
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -25,7 +35,7 @@ header {
     width: 100%;
     animation: preSlideIn 1s forwards, slideIn 1s 1s forwards;
     display: flex;
-    justify-content: space-between; /* Distributes space evenly between logo and navigation */
+    justify-content: space-between;
     align-items: center;
     z-index: 1000;
 }
@@ -37,56 +47,56 @@ header {
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points from the list */
-    margin: 0; /* Removes default margins */
-    padding: 0; /* Removes default padding */
-    display: flex; /* Display items in a row */
-    flex-wrap: wrap; /* Wrap items to the next line when needed */
-    justify-content: center; /* Center the items horizontally */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    margin-right: 20px; /* Adds some space between the links */
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: white; /* Makes the text white */
-    text-decoration: none; /* Removes the underline */
+    color: white;
+    text-decoration: none;
 }
 
 nav ul li a.contact-button {
-    padding: 10px 20px; /* Adds some padding to make the link look like a button */
-    background-color: tomato; /* Changes the background color */
-    color: white; /* Makes the text white */
-    border-radius: 5px; /* Rounds the corners of the button */
-    transition: background-color 0.3s; /* Adds a transition effect when hovering over the button */
+    padding: 10px 20px;
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a.contact-button:hover {
-    background-color: darkorange; /* Changes the background color on hover */
+    background-color: darkorange;
 }
 
 #hero-image {
     position: relative;
-    background-image: 
-        linear-gradient(
-            rgba(0, 0, 255, 0.7), /* Change the RGB values to achieve navy blue */
-            rgba(0, 0, 255, 0.7)
-        ),
-        url('pharmacy1.png');
+    background-image: linear-gradient(rgba(0, 0, 255, 0.7), rgba(0, 0, 255, 0.7)), url('pharmacy1.png');
     background-size: cover;
     background-position: center;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     text-align: center;
-    z-index: 0; 
+    height: 500px;
 }
 
-header h1 {
-    color: orange;
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero-text h1, 
+.hero-text p {
+    margin: 0;
 }
 
 .hero-text h1 {
@@ -127,11 +137,7 @@ header h1 {
 
 #products {
     text-align: center;
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 255, 0.7),
-            rgba(0, 0, 255, 0.7)
-        );
+    background-image: linear-gradient(rgba(0, 0, 255, 0.7), rgba(0, 0, 255, 0.7));
     padding: 20px;
     color: white;
 }
@@ -160,10 +166,6 @@ header h1 {
     width: 100%;
 }
 
-section {
-    padding: 20px;
-}
-
 footer {
     background-color: #f8f9fa;
     text-align: center;
@@ -184,36 +186,31 @@ footer {
     100% { top: 0; }
 }
 
-/* Additional CSS for mobile responsiveness */
 @media only screen and (max-width: 600px) {
-    /* Adjust styles for smaller screens */
     header {
         padding: 5px;
     }
 
     nav ul {
-        flex-direction: column; /* Stack the items vertically */
-        align-items: center; /* Center the items horizontally */
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin-right: 0; /* Remove the right margin */
-        margin-bottom: 10px; /* Add some spacing between the links */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    .service-container,
-    .product-container {
+    .service-container, .product-container {
         flex-direction: column;
     }
 
-    .service-image-container,
-    .product-image-container {
+    .service-image-container, .product-image-container {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .service-text-container,
-    .product-text-container {
+    .service-text-container, .product-text-container {
         width: 100%;
         padding: 0;
     }
