@@ -14,6 +14,8 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+
+
 .section {
     display: flex;
     flex-direction: column;
@@ -67,6 +69,8 @@ header {
     z-index: 9999;
     
 }
+
+
 
 nav ul {
     padding: 20px;
