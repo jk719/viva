@@ -23,8 +23,8 @@ body {
     justify-content: flex-start; /* This line is changed */
     padding: 20px;
     min-height: 500px; /* Adjust as needed */
-}
 
+}
 
 
 
@@ -323,6 +323,7 @@ footer {
 
 
 
+
 /* Med Info Section */
 #med-info {
     background: linear-gradient(to right, #f2e6ff, #e6e6ff); /* Light purple to light blue gradient. */
@@ -360,7 +361,7 @@ footer {
 #reviews {
     padding: 20px;
     text-align: center;
-    background: linear-gradient(to right, #f2e6ff, #e6e6ff);
+    /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
     color: #41024D;
 }
 
@@ -409,7 +410,7 @@ footer {
 
 
 #contact {
-    background-color: white;
+    background: linear-gradient(to right, #f2e6ff, #e6e6ff);
     padding: 20px;
     text-align: center;
     height: 200px; /* Reduced height */
