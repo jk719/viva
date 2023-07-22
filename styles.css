@@ -336,6 +336,26 @@ footer {
 }
 
 
+@media only screen and (max-width: 600px) {
+    /* Health, Beauty, and Vitamins Section */
+    #health-beauty-vitamins p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to display */
+        -webkit-box-orient: vertical;
+    }
+
+    /* Med Info Section */
+    #med-info p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to display */
+        -webkit-box-orient: vertical;
+    }
+}
+
 
 
 
