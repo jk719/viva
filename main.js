@@ -38,5 +38,10 @@ document.querySelectorAll("nav a").forEach(function(navLink) {
     });
 });
 
+document.querySelector(".transfer-form-link").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default action
+    window.location.href = 'transfer.html'; // Redirect to the transfer form page
+});
+
 
 

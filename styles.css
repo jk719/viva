@@ -321,6 +321,12 @@ footer {
     color: #41024D; /* adjust as needed */
 }
 
+#vitamins-img {
+    width: 20%;
+    height: auto;
+}
+
+
 
 
 
@@ -334,6 +340,11 @@ footer {
 #med-info h2 {
     font-size: 3em; /* adjust as needed */
     color: #41024D; /* adjust as needed */
+}
+
+#med-info-img {
+    width: 20%;
+    height: auto;
 }
 
 
@@ -401,6 +412,44 @@ footer {
 
 
 
+#transfer-patient-form {
+    width: 100%; /* Makes the form take up half the width of its parent */
+    margin: auto; /* Centers the form horizontally */
+    background: linear-gradient(to right, #f2e6ff, #e6e6ff); /* Light purple to light blue gradient. */
+
+}
+
+#transfer-patient-form h2 {
+    text-align: center; /* Center the title */
+    padding: 20px 0; /* Add some vertical spacing */
+}
+
+#transfer-patient-form .form-group {
+    margin-bottom: 15px; /* Add some spacing between form groups */
+}
+
+#transfer-patient-form label {
+    display: block; /* Make labels take up the full width */
+    margin-bottom: 5px; /* Add some spacing between label and input field */
+}
+
+#transfer-patient-form input[type="text"],
+#transfer-patient-form textarea {
+    width: 50%; /* Makes the input fields take up half the width of the form */
+    margin: auto; /* Centers the input fields horizontally */
+}
+
+#transfer-patient-form button {
+    background-color: #007BFF; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add some padding */
+    cursor: pointer; /* Change cursor style */
+}
+
+#transfer-patient-form button:hover {
+    background-color: #0056b3; /* Darken the background color when hovered */
+}
 
 
 
@@ -410,7 +459,7 @@ footer {
 
 
 #contact {
-    background: linear-gradient(to right, #f2e6ff, #e6e6ff);
+    /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
     padding: 20px;
     text-align: center;
     height: 200px; /* Reduced height */

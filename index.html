@@ -19,6 +19,7 @@
                 <li><a href="#med-info">Med Info</a></li>
                 <li><a href="https://www.shopify.com" target="_blank" rel="noopener noreferrer">Online Store</a></li>
                 <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#transfer-patient-form">Transfer Patient Form</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#locations">Locations</a></li>
             </ul>
@@ -31,9 +32,6 @@
             <p>Viva Pharmacy & Wellness is a leading healthcare provider dedicated to promoting health and well-being within the community. Our pharmacy is committed to offering a wide range of services to meet the diverse needs of our customers. Through our experienced pharmacists and dedicated staff, we strive to deliver exceptional care and personalized solutions for optimal health outcomes.</p>
         </div>
     </div>
-    
-    
-      
     
     <section id="services" class="section">
         <h2>Services</h2>
@@ -86,7 +84,7 @@
         <!-- Health, Beauty, and Vitamins Section -->
     <section id="health-beauty-vitamins" class="section">
         <div class="section-container">
-            <img class="health-beauty-vitamins-img" src="vitamins.png" alt="Image description">
+            <img id="vitamins-img" src="vitamins.png" alt="Vitamins" width="50%">
             <div>
                 <h2>Health, Beauty, and Vitamins</h2>
                 <p>Explore our wide range of health, beauty, and vitamin products. We stock a comprehensive selection to cater to your health and beauty needs, from daily multivitamins and dietary supplements to skin care products and essential oils.</p>
@@ -100,7 +98,7 @@
     <!-- Med Info Section -->
     <section id="med-info" class="section">
         <div class="section-container">
-            <img class="med-info-img" src="medicine-info.png" alt="Image description">
+            <img id="med-info-img" src="medicine-info.png" alt="Medical Information" width="50%">
             <div>
                 <h2>Med Info</h2>
                 <p>Stay informed about your medications. Here we provide useful information about various medications, their usage, side effects, and more. Medication adherence is crucial for treatment success, and we believe in empowering our customers with knowledge to help them better understand their medications.</p>
@@ -110,9 +108,7 @@
         </div>
     </section>
 
-
    
-
     <section id="reviews" class="section">
         <h2>Reviews</h2>
         <div class="reviews-container">
@@ -134,6 +130,35 @@
             </div>
         </div>
     </section>
+
+
+    <section id="transfer-patient-form" style="padding: 50px 0;">
+        <div class="container">
+            <h2>Transfer Patient Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="patient-name">Patient Name:</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="current-pharmacy">Current Pharmacy:</label>
+                    <input type="text" id="current-pharmacy" name="current-pharmacy" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-pharmacy">New Pharmacy:</label>
+                    <input type="text" id="new-pharmacy" name="new-pharmacy" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason-for-transfer">Reason for Transfer:</label>
+                    <textarea id="reason-for-transfer" name="reason-for-transfer"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
 
     <section id="contact" class="section">
         <h2>Contact Us</h2>
