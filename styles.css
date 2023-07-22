@@ -22,7 +22,7 @@ body {
     align-items: center;
     justify-content: flex-start; /* This line is changed */
     padding: 20px;
-    min-height: 300px; /* Adjust as needed */
+    min-height: 500px; /* Adjust as needed */
 }
 
 
@@ -355,6 +355,50 @@ footer {
         -webkit-box-orient: vertical;
     }
 }
+
+
+#reviews {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #f2e6ff, #e6e6ff);
+    color: #41024D;
+}
+
+#reviews h2 {
+    font-size: 3em;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: flex-start; /* Change this to 'flex-start' to make them fit in one row */
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scroll on small screens */
+}
+
+.review-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Set a minimum width for each review item */
+    max-width: 100%; /* Ensure each item doesn't exceed the container's width */
+}
+
+.review-item h3 {
+    font-size: 1.5em;
+}
+
+.review-item p {
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+    .reviews-container {
+        flex-direction: column;
+    }
+}
+
+
 
 
 
