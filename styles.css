@@ -32,7 +32,60 @@ body {
 
 .section h2 {
     margin-bottom: 20px;
+    /* font-size: 3em; */
+
 }
+
+.section p {
+    margin-bottom: 10px;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-container img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.section-container div {
+    width: 100%;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .section-container img {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 header {
     background-color: #4B0082;
@@ -368,7 +421,7 @@ footer {
     padding: 20px;
     text-align: left; /* Align the text to the left */
     background-color: #4B0082;
-    /* color: white; */
+    color: white;
 
 
 }
@@ -527,7 +580,7 @@ footer {
 #transfer-patient-form label {
     display: block;
     margin-bottom: 5px;
-    color: white;
+    /* color: white; */
 }
 
 #transfer-patient-form input[type="text"],
@@ -536,7 +589,7 @@ footer {
 #transfer-patient-form textarea {
     width: 50%; /* Make the input fields 50% smaller */
     padding: 10px;
-    color: white;
+    /* color: white; */
     /* background-color: #4B0082; */
     border: 5px solid #4B0082;
 }
