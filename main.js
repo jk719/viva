@@ -1,22 +1,9 @@
-
-document.querySelector(".menu-toggle").addEventListener("click", function() {
-var nav = document.querySelector("nav");
-if (nav.style.display === "none") {
-    nav.style.display = "block";
-} else {
-    nav.style.display = "none";
-}
-});
-
-
-
-
 document.querySelectorAll("nav a").forEach(function(navLink) {
     navLink.addEventListener("click", function(event) {
         var target = this.getAttribute('href');
 
-        // check if link is external
-        if (!target.startsWith("http")) {
+        // check if link is internal (starts with '#')
+        if (target.startsWith("#")) {
             event.preventDefault(); // prevent the default action
 
             target = document.querySelector(target); // get the target element
@@ -29,19 +16,16 @@ document.querySelectorAll("nav a").forEach(function(navLink) {
 
             // Scroll to the new position
             window.scrollTo({ top: positionToScrollTo, behavior: 'smooth' });
-        }
 
-        // Only hide the navigation menu if the viewport width is <= 600px
-        if (window.innerWidth <= 600) {
-            document.querySelector("nav").style.display = "none";
+            // Only hide the navigation menu if the viewport width is <= 600px
+            if (window.innerWidth <= 600) {
+                document.querySelector("nav").style.display = "none";
+            }
+        } 
+        // check if link is external (starts with 'http')
+        else if (!target.startsWith("http")) {
+            // This will allow the link to perform its default action, which is to navigate to 'transfer.html'
+            // No need to prevent the default action or do anything else
         }
     });
 });
-
-document.querySelector(".transfer-form-link").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default action
-    window.location.href = 'transfer.html'; // Redirect to the transfer form page
-});
-
-
-

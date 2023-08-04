@@ -32,7 +32,7 @@ body {
 
 .section h2 {
     margin-bottom: 20px;
-    /* font-size: 3em; */
+    font-size: 3em;
 
 }
 
@@ -99,6 +99,8 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    opacity: .8;
+    
 }
 
 .logo {
@@ -166,9 +168,8 @@ nav ul li a.contact-button:hover {
 
 #hero-image {
     position: relative;
-    background-image: linear-gradient(rgba(225, 225, 225, 0.0), rgba(225, 225, 225, 0.0)), url('pharmacy3.png');
-    /* background-color: rgba(225, 225, 225, 0.7); */
-    /* background-color: #4B0082; */
+    background-image: linear-gradient(rgba(225, 225, 225, 0.0), rgba(225, 225, 225, 0.0)), url('pharmacy6.png');
+   
 
 
     background-size: cover;
@@ -250,9 +251,10 @@ nav ul li a.contact-button:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
 }
+
 
 .service-item {
     background: #f9f9f9;
@@ -288,6 +290,36 @@ nav ul li a.contact-button:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+.service-item:hover .hover-text {
+    display: block;
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    /* Add other styles as necessary (background color, text color, etc.) */
+}
+
+.service-item:hover .hover-text {
+    display: block;
+}
+
+.service-item .service-description .long-description {
+    display: none;
+}
+
+.service-item:hover .service-description .short-description {
+    display: none;
+}
+
+.service-item:hover .service-description .long-description {
+    display: block;
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -448,47 +480,21 @@ footer {
 }
 
 
-
-
-/* Med Info Section */
-#med-info {
-    /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
-    /* Light purple to light blue gradient. */
-    padding: 20px;
-    text-align: left; /* Align the text to the left */
-    /* background-color: #4B0082; */
-    /* color: white; */
+#MedsOnCue .med-images {
+    display: flex;
+    justify-content: space-between;
 }
 
-#med-info h2 {
-    font-size: 3em; /* adjust as needed */
+#MedsOnCue img {
+    width: 45%;
+    height: auto;
+    border: 5px solid #000;
+    transition: transform 0.3s ease; /* to create smooth effect */
   
 }
 
-#med-info-img {
-    width: 25%; /* Adjust the size of the image as needed */
-    height: auto;
-    float: right; /* Float the image to the right */
-    margin-left: 20px; /* Add some spacing between the text and image */
-}
 
-/* Clear the float to avoid overlapping with other elements */
-.section-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
-#med-info ol {
-    text-align: left; /* Align the list items to the left */
-    list-style-type: decimal; /* Display the list items as decimal numbers */
-    padding-left: 30px;
-    margin-top: 20px;
-}
-
-#med-info ol li {
-    margin-bottom: 10px; /* Add some spacing between the list items */
-}
 
 
 
@@ -549,6 +555,21 @@ footer {
 .review-item p {
     font-size: 1.2em;
 }
+
+
+.review-item .review-text .long-review {
+    display: none;
+}
+
+.review-item:hover .review-text .short-review {
+    display: none;
+}
+
+.review-item:hover .review-text .long-review {
+    display: block;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .reviews-container {
