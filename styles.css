@@ -157,17 +157,30 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a.contact-button {
+nav a {
+    color: #000000; /* normal color */
+    transition: color 0.5s ease; /* transition effect */
+}
+
+nav a:hover {
+    color: #ff0000;
+    /* background-color: #ffff00; */
+    border: 2px solid #ff0000;
+}
+
+
+/* nav ul li a.contact-button {
     padding: 10px 20px;
     background-color: tomato;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s;
-}
+} */
 
+/* 
 nav ul li a.contact-button:hover {
     background-color: darkorange;
-}
+} */
 
 #hero-image {
     position: relative;
