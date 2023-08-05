@@ -61,6 +61,9 @@ body {
     width: 100%;
 }
 
+
+
+
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
     .section-container {
@@ -407,45 +410,24 @@ footer {
 
 /* Home Delivery Section */
 
-#home-delivery {
-    background-color: #f8f9fa;
-    padding: 20px;
+#home-delivery-services .content-wrapper {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: space-between; /* Add space between the image and text */
+    color: #4B0082;
+}
+
+#home-delivery-services .section-image {
+    width: 50%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+}
+
+#home-delivery-services .section-text {
+    width: 45%; /* Adjust as needed */
     text-align: left;
 }
 
-#home-delivery h2 {
-    font-size: 3em;
-    color: #41024D;
-}
-
-#home-delivery p {
-    color: #41024D;
-    margin-bottom: 10px;
-}
-
-#home-delivery p:last-child {
-    margin-bottom: 0;
-}
-
-#home-delivery .section-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#home-delivery .section-container img {
-    width: 35%;
-    margin-right: 5%;
-}
-
-#home-delivery .section-container div {
-    width: 45%;
-}
-
-.delivery-image {
-    max-width: 100%;
-    height: auto;
-}
 
 
 /* Health, Beauty, and Vitamins Section */
@@ -463,13 +445,6 @@ footer {
     color: white; /* adjust as needed */
 }
 
-#vitamins-img {
-    width: 25%; /* Adjust the size of the image as needed */
-    height: auto;
-    float: left; /* Float the image to the left */
-    margin-right: 20px; /* Add some spacing between the image and text */
-}
-
 
 /* Clear the float to avoid overlapping with other elements */
 .section-container::after {
@@ -479,6 +454,28 @@ footer {
     color: white;
 }
 
+
+
+#health-beauty-vitamins .content-wrapper {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: space-between; /* Add space between the image and text */
+    background-color: #4B0082;
+}
+
+#health-beauty-vitamins .section-image {
+    width: 50%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+}
+
+#health-beauty-vitamins .section-text {
+    width: 45%; /* Adjust as needed */
+    text-align: left;
+}
+
+
+/* MedsOnCue Section */
 
 #MedsOnCue .med-images {
     display: flex;
@@ -495,6 +492,32 @@ footer {
 
 
 
+#specialty-pharmacy-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    background-color: #4B0082;
+    color: white;
+}
+
+#specialty-pharmacy-services .content-wrapper {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: space-between; /* Add space between the image and text */
+}
+
+#specialty-pharmacy-services .section-image {
+    width: 50%; /* Adjust as needed */
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+}
+
+#specialty-pharmacy-services .section-text {
+    width: 45%; /* Adjust as needed */
+    text-align: left;
+}
 
 
 
@@ -524,12 +547,11 @@ footer {
     text-align: center;
     /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
     /* color: #41024D; */
-    background-color: #4B0082;
 }
 
 #reviews h2 {
     font-size: 3em;
-    color: white;
+    color: #4B0082;
 }
 
 .reviews-container {
@@ -537,6 +559,7 @@ footer {
     justify-content: flex-start; /* Change this to 'flex-start' to make them fit in one row */
     gap: 20px;
     overflow-x: auto; /* Enable horizontal scroll on small screens */
+    color: #4B0082;
 }
 
 .review-item {
