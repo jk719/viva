@@ -23,9 +23,12 @@ document.querySelectorAll("nav a").forEach(function(navLink) {
             }
         } 
         // check if link is external (starts with 'http')
-        else if (!target.startsWith("http")) {
-            // This will allow the link to perform its default action, which is to navigate to 'transfer.html'
-            // No need to prevent the default action or do anything else
+        else if (target.startsWith("http")) {
+            // The default behavior (navigating to the external link) is desired in this case, so we don't need to prevent it or do anything else
+        }
+        // The link is assumed to be a relative link if it's not an internal or external link
+        else {
+            // The default behavior (navigating to the relative link) is desired in this case, so we don't need to prevent it or do anything else
         }
     });
 });
