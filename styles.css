@@ -254,41 +254,6 @@ nav a:hover {
 }
 
 
-/* .individual-service {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-} */
-
-/* .individual-service h3 {
-    margin-bottom: 10px;
-}
-
-.individual-service p {
-    margin-bottom: 0;
-} */
-
-
-/* .section-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-
-/* .section-container img {
-    width: 90%; 
-    margin-right: 5%; 
-}
-
-.section-container div {
-    width: 45%; 
-} */
-
-
-
-
 @media only screen and (max-width: 600px) {
     header {
         padding: 5px;
@@ -324,52 +289,6 @@ nav a:hover {
 }
 
 #home-delivery-services .section-text {
-    width: 45%; /* Adjust as needed */
-    text-align: left;
-}
-
-
-
-/* Health, Beauty, and Vitamins Section */
-#health-beauty-vitamins {
-    padding: 20px;
-    text-align: left; /* Align the text to the left */
-    background-color: #4B0082;
-    color: white;
-
-
-}
-
-#health-beauty-vitamins h2 {
-    font-size: 3em; /* adjust as needed */
-    color: white; /* adjust as needed */
-}
-
-
-/* Clear the float to avoid overlapping with other elements */
-.section-container::after {
-    content: "";
-    display: table;
-    clear: both;
-    color: white;
-}
-
-
-
-#health-beauty-vitamins .content-wrapper {
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: space-between; /* Add space between the image and text */
-    background-color: #4B0082;
-}
-
-#health-beauty-vitamins .section-image {
-    width: 50%; /* Adjust as needed */
-    max-width: 500px; /* Adjust as needed */
-    height: auto;
-}
-
-#health-beauty-vitamins .section-text {
     width: 45%; /* Adjust as needed */
     text-align: left;
 }
@@ -418,6 +337,11 @@ nav a:hover {
 #specialty-pharmacy-services .section-text {
     width: 45%; /* Adjust as needed */
     text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -649,13 +573,13 @@ footer {
 
 
 /* Assuming 768px is the breakpoint for mobile devices. You can adjust as needed. */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .mobile-text {
         display: none;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .desktop-text {
         display: none;
     }
@@ -666,13 +590,13 @@ footer {
 
 
 /* Assuming 768px is the breakpoint for mobile devices. Adjust if needed. */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .mobile-text {
         display: none;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .desktop-text {
         display: none;
     }
