@@ -108,7 +108,9 @@ header {
     left: 0;
     overflow: auto;
     z-index: 9999;
+    background-color: #4B0082; /* Add this line to make the nav dropdown the same color as the header */
 }
+
 
 nav ul {
     padding: 20px;
@@ -118,6 +120,7 @@ nav ul {
     justify-content: center;
     height: 100%;
     list-style: none;
+    background-color: #4B0082; /* This may not be necessary since the parent already has the color, but you can include it for specificity */
 }
 
 nav ul li {
@@ -129,6 +132,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 
 
 nav a:hover {
@@ -144,6 +148,62 @@ nav a:hover {
 @keyframes slideIn {
     0% { top: -50px; }
     100% { top: 0; }
+}
+
+
+
+@media (min-width: 601px) {
+    nav {
+        display: block !important; /* override any inline styles set by JS */
+        position: static; /* remove fixed positioning */
+        height: auto; /* override the full height */
+        width: auto; /* override the full width */
+        background: none; /* or set to your preferred background color */
+    }
+    .menu-toggle {
+        display: none; /* hide the toggle button */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .logo {
+        height: 50px; /* Adjust the logo size for better fit */
+    }
+
+    nav ul {
+        padding: 10px; /* Adjust padding for the nav ul */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for each list item */
+    }
+}
+
+
+@media (max-width: 320px) {
+    header {
+        padding: 3px; /* Reduce padding for very small screens */
+    }
+
+    .logo {
+        height: 40px; /* Further reduce the logo size for a better fit */
+    }
+
+    .menu-toggle {
+        font-size: 1em; /* Adjust the menu icon size */
+    }
+
+    nav ul {
+        padding: 5px; /* Adjust padding for the nav ul */
+    }
+
+    nav ul li {
+        margin: 8px 0; /* Adjust margin for each list item */
+    }
 }
 
 
@@ -247,6 +307,11 @@ nav a:hover {
 }
 
 
+
+
+
+
+
 @media only screen and (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -312,6 +377,35 @@ nav a:hover {
 /* Specialty Pharmacy Services Section */
 
 
+
+.specialty-services {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.specialty-service-item {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.specialty-service-item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.specialty-service-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.specialty-service-item h2 {
+    font-size: 20px;
+}
+
+
 #specialty-pharmacy-services {
     display: flex;
     flex-direction: column;
@@ -346,25 +440,44 @@ img {
 
 
 
-@media only screen and (max-width: 600px) {
-    /* Health, Beauty, and Vitamins Section */
-    #health-beauty-vitamins p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* number of lines to display */
-        -webkit-box-orient: vertical;
+/* ... existing CSS ... */
+
+/* For 600px screen width */
+@media (max-width: 600px) {
+    #specialty-pharmacy-services .content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+    }
+    
+    #specialty-pharmacy-services .section-image,
+    #specialty-pharmacy-services .section-text {
+        width: 100%; /* Full width for both image and text */
     }
 
-    /* Med Info Section */
-    #med-info p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3; /* number of lines to display */
-        -webkit-box-orient: vertical;
+    .specialty-service-item {
+        width: calc(50% - 20px); /* Allow two items per row */
     }
 }
+
+/* For 480px screen width */
+@media (max-width: 480px) {
+    .specialty-service-item {
+        width: 100%; /* Each item takes up a full row */
+        margin: 10px 0; /* Adjust the margin */
+    }
+}
+
+/* For 320px screen width */
+@media (max-width: 320px) {
+    #specialty-pharmacy-services .section-text h2,
+    .specialty-service-item h2 {
+        font-size: 18px; /* Reduce the font size a bit for small screens */
+    }
+    
+    #specialty-pharmacy-services .section-text p {
+        font-size: 14px; /* Reduce paragraph text size for better fit */
+    }
+}
+
 
 /* Reviews Section */
 
