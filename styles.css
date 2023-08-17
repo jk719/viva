@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     padding-bottom: 60px; 
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Lato', sans-serif;
     /* background-color: #4B0082; */
 
 }
@@ -70,7 +70,7 @@ body {
 }
 
 header {
-    background-color: #4B0082;
+    background-color: #FFD700 ;
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -108,7 +108,7 @@ header {
     left: 0;
     overflow: auto;
     z-index: 9999;
-    background-color: #4B0082; /* Add this line to make the nav dropdown the same color as the header */
+    
 }
 
 
@@ -120,7 +120,7 @@ nav ul {
     justify-content: center;
     height: 100%;
     list-style: none;
-    background-color: #4B0082; /* This may not be necessary since the parent already has the color, but you can include it for specificity */
+    
 }
 
 nav ul li {
@@ -129,7 +129,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #4B0082;
     text-decoration: none;
 }
 
