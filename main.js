@@ -34,8 +34,27 @@ document.querySelectorAll("nav a").forEach(function(navLink) {
 });
 
 
+// document.querySelector(".menu-toggle").addEventListener("click", function() {
+//     var nav = document.querySelector("nav");
+    
+//     if (nav.style.display === "none" || nav.style.display === "") {
+//         nav.style.display = "block";
+//     } else {
+//         nav.style.display = "none";
+//     }
+// });
+
+
+
 document.querySelector(".menu-toggle").addEventListener("click", function() {
     var nav = document.querySelector("nav");
+    var header = document.querySelector("header");
+
+    // Get the background color of the header
+    var headerBgColor = window.getComputedStyle(header).getPropertyValue('background-color');
+
+    // Apply the header's background color to the nav
+    nav.style.backgroundColor = headerBgColor;
     
     if (nav.style.display === "none" || nav.style.display === "") {
         nav.style.display = "block";
