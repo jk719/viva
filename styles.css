@@ -167,7 +167,7 @@ nav a:hover {
     }
 
     .logo {
-        height: 150px; /* Adjust the logo size for better fit */
+        height: 100px; /* Adjust the logo size for better fit */
     }
 
     nav ul {
@@ -186,7 +186,7 @@ nav a:hover {
     }
 
     .logo {
-        height: 150px; /* Further reduce the logo size for a better fit */
+        height: 100px; /* Further reduce the logo size for a better fit */
     }
 
     .menu-toggle {
@@ -209,6 +209,7 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     color: #41024D;
+    
     text-align: center;
     height: 600px;
 }
