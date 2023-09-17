@@ -131,7 +131,7 @@ nav ul li a {
 
 
 
-nav ul li.more a {
+nav ul li.more li a {
     /* Copy the styles from the other nav links here */
     color: #404040;
     text-decoration: none;
@@ -146,7 +146,8 @@ nav ul li.more a {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 95%; /* Center the dropdown relative to the "more" link */
+    transform: translateX(-50%); /* Adjust the position to truly center it */
     background-color: #FFD700;
     list-style: none;
     padding: 0;
@@ -156,6 +157,7 @@ nav ul li.more a {
     z-index: 9999;
     display: none;
 }
+
 
 .more:hover .dropdown-menu {
     display: block;
