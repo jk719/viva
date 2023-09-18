@@ -86,37 +86,33 @@ header {
     margin-right: 10px;
 }
 
-.menu-toggle {
-    display: none;
-    color: #fff;  
+/* .menu-toggle {
+    display: block;
+    color: black;  
     background: transparent;
     border: none;
     font-size: 1.5em; 
   }
-  
+   */
 
   
-nav {
-    position: relative; /* Ensure nav is positioned relative */
-    overflow: visible; /* Ensure overflow doesn't clip dropdown */
+/* nav {
+    position: relative; 
+    overflow: visible; 
     padding: auto;
-}
+} */
 
 
 nav ul {
     position: relative;
-    padding-right: 20px; /* Reduce the padding-right to create more space */
+    padding-right: 20px; 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
     list-style: none;
     white-space: nowrap;
 }
 
 nav ul li {
-    margin: 5px; /* Reduce the margin to create more space between links */
+    margin: 5px; 
 }
 
 nav ul li a {
@@ -163,13 +159,83 @@ nav ul li.more li a {
     display: block;
 }
 
-
+nav ul.active {
+    display: flex;
+}
 
 
 nav a:hover {
     color: #ff0000;
     border: 2px solid #ff0000;
 }
+
+.menu-toggle {
+    background: none;
+    border: none;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none; 
+    box-shadow: none;
+}
+
+.bar {
+    background-color: #333;  /* change to your preferred color */
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin: 3px 0;
+    transition: background 0.3s ease;
+}
+
+.menu-toggle:hover .bar {
+    background-color: #555; /* slightly lighter shade on hover */
+}
+
+
+
+/* By default, hide the links under 'more-on-mobile' class */
+.more-on-mobile {
+    display: none;
+}
+
+
+
+/* On screens that are 600px or less, display the links */
+@media screen and (max-width: 600px) {
+    .more-on-mobile {
+        display: block; /* or 'inline', 'flex', etc. depending on your layout */
+    }
+
+    .more {
+        display: none;
+    }
+}
+
+
+/* Mobile view: Links displayed under the header */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        position: fixed; /* Fixed position to keep it under the header */
+        top: 80px; /* Adjust as needed to align it below the header */
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 215, 0, 0.8); /* Yellow with transparency */
+        padding: 10px 0; /* Adjust padding as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999; /* Ensure it's above other content */
+        
+    }
+}
+
+
+
+
 
 @keyframes preSlideIn {
     0% { top: -100px; }
@@ -181,61 +247,6 @@ nav a:hover {
     100% { top: 0; }
 }
 
-
-
-@media (min-width: 601px) {
-    nav {
-        display: block !important; /* override any inline styles set by JS */
-        position: static; /* remove fixed positioning */
-        height: auto; /* override the full height */
-        width: auto; /* override the full width */
-        background: none; /* or set to your preferred background color */
-    }
-    .menu-toggle {
-        display: none; /* hide the toggle button */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 5px; /* Reduce padding for smaller screens */
-    }
-
-    .logo {
-        height: 100px; /* Adjust the logo size for better fit */
-    }
-
-    nav ul {
-        padding: 10px; /* Adjust padding for the nav ul */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Adjust margin for each list item */
-    }
-}
-
-
-@media (max-width: 320px) {
-    header {
-        padding: 3px; /* Reduce padding for very small screens */
-    }
-
-    .logo {
-        height: 100px; /* Further reduce the logo size for a better fit */
-    }
-
-    .menu-toggle {
-        font-size: 1em; /* Adjust the menu icon size */
-    }
-
-    nav ul {
-        padding: 5px; /* Adjust padding for the nav ul */
-    }
-
-    nav ul li {
-        margin: 8px 0; /* Adjust margin for each list item */
-    }
-}
 
 
 #hero-image {
@@ -709,7 +720,6 @@ footer {
 
 
 @media only screen and (min-width: 600px) {
-
     header {
         padding: 5px;
     }
@@ -731,6 +741,10 @@ footer {
      nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 }
 

@@ -21,15 +21,24 @@ function handleInternalLinkClick(event) {
 
 // Function to handle menu toggle on mobile devices
 function toggleMenu() {
-    var nav = document.querySelector("nav");
+    var nav = document.querySelector("nav.navbar");
     var header = document.querySelector("header");
+    var moreDropdown = document.querySelector(".dropdown-menu");
 
     if (!nav || !header) return; // Exit if nav or header doesn't exist
 
-    var headerBgColor = window.getComputedStyle(header).getPropertyValue('background-color');
-    nav.style.backgroundColor = headerBgColor;
-    nav.style.display = (nav.style.display === "none" || nav.style.display === "") ? "block" : "none";
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "block";
+        moreDropdown.style.display = "block"; // Show the More dropdown menu
+    } else {
+        nav.style.display = "none";
+        moreDropdown.style.display = "none"; // Hide the More dropdown menu
+    }
 }
+
+
+
+
 
 // Add event listeners if elements exist
 var navLinks = document.querySelectorAll("nav a");
@@ -43,3 +52,5 @@ var menuToggle = document.querySelector(".menu-toggle");
 if (menuToggle) {
     menuToggle.addEventListener("click", toggleMenu);
 }
+
+
