@@ -213,6 +213,10 @@ nav a:hover {
     .more {
         display: none;
     }
+
+    .navbar {
+        display: none;
+    }
 }
 
 
@@ -783,5 +787,4 @@ footer {
         display: block;
     }
 }
-
 

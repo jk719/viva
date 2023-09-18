@@ -20,6 +20,7 @@ function handleInternalLinkClick(event) {
 }
 
 // Function to handle menu toggle on mobile devices
+// Function to handle menu toggle on mobile devices
 function toggleMenu() {
     var nav = document.querySelector("nav.navbar");
     var header = document.querySelector("header");
@@ -40,6 +41,7 @@ function toggleMenu() {
 
 
 
+
 // Add event listeners if elements exist
 var navLinks = document.querySelectorAll("nav a");
 if (navLinks.length) {
@@ -52,5 +54,7 @@ var menuToggle = document.querySelector(".menu-toggle");
 if (menuToggle) {
     menuToggle.addEventListener("click", toggleMenu);
 }
+
+
 
 
