@@ -4,107 +4,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <div id="mobile-menu-overlay"></div>
     <header id="myHeader">
-        <img src="img/logo1.png" alt="Logo" class="logo">
-        <button class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>        
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="https://app.digitalpharmacist.com/assessment-form/?configId=36cdfe6f-6236-4ef0-b26a-15b9aa19d710" target="_blank" rel="noopener noreferrer">Schedule a Vaccine Appointment</a></li> 
-                <div class="more-on-mobile">
-                    <li><a href="https://nova-q-health.myshopify.com/" target="_blank" rel="noopener noreferrer">Online Store</a></li>
+    <img src="img/logo1.png" alt="Logo" class="logo">
+    <button class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>        
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="refill-pescription.html">Refill My Prescription</a></li>
+            <li><a href="bivalent-prebook.html">Bivalent Booster Pre-book</a></li>
+            <div class="more-on-mobile">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#specialty-pharmacy-services">Specialty Pharmacy Services</a></li>
+                <li><a href="index.html#MedsOnCue">My Medication Videos</a></li>
+                <li><a href="https://nova-q-health.myshopify.com/" target="_blank" rel="noopener noreferrer">Online Store</a></li>
+                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+
+            </div>
+            <li class="more">
+                <a href="">More</a>
+                <ul class="dropdown-menu">
+                    <!-- Add other links here -->
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#specialty-pharmacy-services">Specialty Pharmacy Services</a></li>
                     <li><a href="index.html#MedsOnCue">My Medication Videos</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#specialty-pharmacy-services">Specialty Pharmacy Services</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                </div>
-                <li class="more">
-                    <a href="">More</a>
-                    <ul class="dropdown-menu">
-                        <!-- Add other links here -->
-                        <li><a href="https://nova-q-health.myshopify.com/" target="_blank" rel="noopener noreferrer">Online Store</a></li>
-                        <li><a href="index.html#MedsOnCue">My Medication Videos</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#locations">Locations</a></li>
-                        <li><a href="#specialty-pharmacy-services">Specialty Pharmacy Services</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="transfer-form">
-      <section id="transfer-patient-form" style="padding: 50px 0;">
-        <div class="container">
-            <h2>Complete Our Secure Form Below To Become A New Patient</h2>
-            <p>Need Help? Call us for immediate assistance at 718-450-9595.</p>
-            <h3>Transfer a Prescription</h3>
-            <form>
-                <div class="form-group">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone-number">Phone Number:</label>
-                    <input type="tel" id="phone-number" name="phone-number" required>
-                </div>
-                <div class="form-group">
-                    <label for="birthday">Birthday:</label>
-                    <input type="text" id="birthday" name="birthday" placeholder="MM/DD/YYYY" required>
-                </div>
-                <div class="form-group">
-                    <label for="new-pharmacy-location">Select which of our locations you'd like to use:</label>
-                    <select id="new-pharmacy-location" name="new-pharmacy-location" required>
-                        <option value="VIVA Pharmacy & Wellness">VIVA Pharmacy & Wellness</option>
-                        <!-- Add other location options here if needed -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="old-pharmacy-name">Tell us about your old pharmacy so we can transfer your medications:</label>
-                    <input type="text" id="old-pharmacy-name" name="old-pharmacy-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="old-pharmacy-number">Pharmacy Number:</label>
-                    <input type="text" id="old-pharmacy-number" name="old-pharmacy-number" required>
-                </div>
-                <div class="form-group">
-                    <label for="medication-details">If Prescriptions - Add the medication name and Rx number for all that you'd like to transfer:</label>
-                    <textarea id="medication-details" name="medication-details"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="transfer-all-medications">Transfer all of my medications:</label>
-                    <input type="checkbox" id="transfer-all-medications" name="transfer-all-medications">
-                </div>
-                <div class="form-group">
-                    <label for="notes-for-pharmacy">Notes for Pharmacy (Optional):</label>
-                    <textarea id="notes-for-pharmacy" name="notes-for-pharmacy"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="questions-comments">Questions or Comments:</label>
-                    <textarea id="questions-comments" name="questions-comments"></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
-                    <label for="terms-and-conditions">I agree to the Terms and Conditions and Privacy Policy</label>
-                </div>
-                <div class="form-group">
-                    <button type="submit">SUBMIT TRANSFER</button>
-                </div>
-            </form>
-        </div>
-      </section>
-    </div>
-</body>
+                    <li><a href="https://nova-q-health.myshopify.com/" target="_blank" rel="noopener noreferrer">Online Store</a></li>
+                    <li><a href="index.html#locations">Locations</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+        <script src="main.js"></script>
+    </body>
 </html>
+
+
+
+
