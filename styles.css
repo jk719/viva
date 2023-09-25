@@ -299,8 +299,8 @@ nav a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1em;
+    grid-template-columns: repeat(4, 1fr); /* This will create 4 columns of equal width */
+    gap: 20px; /* This adds a gap between the grid items, adjust as needed */
 }
 
 
@@ -676,6 +676,22 @@ img {
     background-color: darkorange;
 }
 
+
+#locations{
+    background-color: #4B0082;
+    color: white;
+
+}
+
+.locations-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+    
+}
+
+
 /* Contact Us Section */
 
 #contact {
@@ -683,8 +699,8 @@ img {
     padding: 20px;
     text-align: center;
     height: 200px; /* Reduced height */
-    background-color: #4B0082;
-    color: white;
+    background-color: white;
+    color: #4B0082;
 }
 
 .contact-form {
@@ -721,6 +737,10 @@ footer {
     justify-content: center; /* Horizontally centers content */
     align-items: center;     /* Vertically centers content */
     height: 100px;           /* Adjust the height as necessary */
+    background-color: #4B0082;
+    color: white
+;
+
 }
 
 .footer-content {
