@@ -680,7 +680,11 @@ img {
 #locations{
     background-color: #4B0082;
     color: white;
+    
+}
 
+.location {
+    margin: 100px;
 }
 
 .locations-container {
