@@ -684,7 +684,10 @@ img {
 }
 
 .location {
-    margin: 100px;
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .locations-container {
@@ -692,8 +695,33 @@ img {
     display: flex;
     justify-content: space-evenly ;
     align-items: center;
+    padding: 0;
     
 }
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .locations-container {
+        display: block;
+    }
+    .location {
+        margin-bottom: 20px;
+    }
+    .location-details {
+        padding: 10px;
+    }
+    .location p {
+        margin-bottom: 10px;
+    }
+}
+
 
 
 /* Contact Us Section */
