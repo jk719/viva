@@ -101,7 +101,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #41024D;
+    color:black;
     text-decoration: none;
     font-weight: bold; /* Make the links bolder */
     padding: 10px 15px; /* Add padding to each link */
@@ -150,8 +150,8 @@ nav ul.active {
 
 
 nav a:hover {
-    color: #41024D;
-    border: 2px solid #41024D;
+    color: #D70040;
+    border: 2px solid #D70040;
 }
 
 .menu-toggle {
@@ -270,7 +270,7 @@ nav a:hover {
     background-image: linear-gradient(rgba(225, 225, 225, 0.0), rgba(225, 225, 225, 0.0)), url('pharmacy6.png');
     background-size: cover;
     background-position: center;
-    color: #41024D;
+    color: #D70040;
     margin-top: 40px;
     text-align: center;
     height: 600px;
@@ -279,8 +279,8 @@ nav a:hover {
 #services {
     text-align: center;
     padding: 20px;
-    color: #41024D;
-    background-color: #4B0082;
+    color: #D70040;
+    background-color: #D70040;
 }
 
 #services h2 {
@@ -314,13 +314,13 @@ nav a:hover {
 
 .service-item h3 {
     font-size: 1.5em; /* Adjust size as needed */
-    color: #41024D;
+    color: black;
 
 }
 
 .service-item p {
     font-size: 1.2em; /* Adjust size as needed */
-    color: #41024D;
+    color: black;
 
 }
 
@@ -403,7 +403,7 @@ nav a:hover {
     display: flex;
     align-items: center; /* Center the content vertically */
     justify-content: space-between; /* Add space between the image and text */
-    color: #4B0082;
+    color: #D70040;
 }
 
 #home-delivery-services .section-image {
@@ -492,7 +492,7 @@ nav a:hover {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    background-color: #4B0082;
+    background-color: #D70040;
     color: white;
 }
 
@@ -565,12 +565,12 @@ img {
     padding: 20px;
     text-align: center;
     /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
-    /* color: #41024D; */
+    /* color: #D70040; */
 }
 
 #reviews h2 {
     font-size: 3em;
-    color: #4B0082;
+    color: black;
 }
 
 .reviews-container {
@@ -578,7 +578,7 @@ img {
     justify-content: flex-start; /* Change this to 'flex-start' to make them fit in one row */
     gap: 20px;
     overflow-x: auto; /* Enable horizontal scroll on small screens */
-    color: #4B0082;
+    color: black;
 }
 
 .review-item {
@@ -626,9 +626,9 @@ img {
     width: 100%;
     margin: auto;
     text-align: center;
-    /* background-color: #4B0082; */
+    /* background-color: #D70040; */
     padding: 50px 0;
-    color: #4B0082;
+    color: #D70040;
 }
 
 #transfer-patient-form h2 {
@@ -654,8 +654,8 @@ img {
     width: 50%; /* Make the input fields 50% smaller */
     padding: 10px;
     /* color: white; */
-    /* background-color: #4B0082; */
-    border: 5px solid #4B0082;
+    /* background-color: #D70040; */
+    border: 5px solid #D70040;
 }
 
 #transfer-patient-form textarea {
@@ -664,7 +664,7 @@ img {
 
 #transfer-patient-form button {
     padding: 10px 20px;
-    background-color: tomato;
+    background-color:  #D70040;
     color: white;
     border: none;
     border-radius: 5px;
@@ -673,12 +673,12 @@ img {
 }
 
 #transfer-patient-form button:hover {
-    background-color: darkorange;
+    background-color:  #D70040;
 }
 
 
 #locations{
-    background-color: #4B0082;
+    background-color: #D70040;
     color: white;
     
 }
@@ -732,7 +732,7 @@ img {
     text-align: center;
     height: 200px; /* Reduced height */
     background-color: white;
-    color: #4B0082;
+    color: black;
 }
 
 .contact-form {
@@ -741,17 +741,23 @@ img {
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 50%;
 }
 
 .contact-form input, .contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
     width: 80%;
+
+}
+
+textarea {
+    height: 35%;
 }
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: tomato;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
@@ -760,7 +766,7 @@ img {
 }
 
 .contact-form button:hover {
-    background-color: darkorange;
+    background-color: #D70040;
 }
 
 
@@ -769,7 +775,7 @@ footer {
     justify-content: center; /* Horizontally centers content */
     align-items: center;     /* Vertically centers content */
     height: 100px;           /* Adjust the height as necessary */
-    background-color: #4B0082;
+    background-color: #D70040;
     color: white
 ;
 
