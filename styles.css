@@ -471,28 +471,29 @@ img {
 
 /* Building Enterprise Section */
 
+/* Enterprise Section */
 #enterprise-section {
     text-align: center;
     padding: 40px;
     background-color: #D70040;
-    
+
 }
 
 #enterprise-section .content-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Change to column for mobile */
     align-items: center;
 }
 
 #enterprise-section .section-image-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%; /* Adjust as needed */
     margin-bottom: 20px;
 }
 
 #enterprise-section .section-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -516,8 +517,7 @@ img {
 }
 
 #enterprise-image {
-    width: 200%;
-    padding: 100px;
+    max-width: 30%;
 }
 
 /* Media Queries for Mobile Devices */
