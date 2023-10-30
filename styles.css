@@ -708,6 +708,17 @@ img {
     text-align: center;
 }
 
+/* Locations Section */
+.location-details a {
+    color: inherit; /* Use the default text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Optional: Add hover styles for better user feedback */
+.location-details a:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
