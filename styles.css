@@ -276,6 +276,14 @@ nav a:hover {
     height: 600px;
 }
 
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    #hero-image {
+        height: 300px; /* Adjust the height as needed for mobile */
+    }
+}
+
+
 #services {
     text-align: center;
     padding: 20px;
@@ -454,65 +462,6 @@ nav a:hover {
 /* For 320px, the styles from the 480px media query can apply as well unless there are additional specific changes desired for that size */
 
 
-/* Specialty Pharmacy Services Section */
-
-
-
-.specialty-services {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.specialty-service-item {
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.specialty-service-item:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.specialty-service-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.specialty-service-item h2 {
-    font-size: 20px;
-}
-
-
-#specialty-pharmacy-services {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    background-color: #D70040;
-    color: white;
-}
-
-#specialty-pharmacy-services .content-wrapper {
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: space-between; /* Add space between the image and text */
-}
-
-#specialty-pharmacy-services .section-image {
-    width: 50%; /* Adjust as needed */
-    max-width: 500px; /* Adjust as needed */
-    height: auto;
-}
-
-#specialty-pharmacy-services .section-text {
-    width: 45%; /* Adjust as needed */
-    text-align: left;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -520,44 +469,80 @@ img {
 
 
 
-/* ... existing CSS ... */
+/* Building Enterprise Section */
 
-/* For 600px screen width */
-@media (max-width: 600px) {
-    #specialty-pharmacy-services .content-wrapper {
-        flex-direction: column; /* Stack content vertically */
-    }
+#enterprise-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #D70040;
     
-    #specialty-pharmacy-services .section-image,
-    #specialty-pharmacy-services .section-text {
-        width: 100%; /* Full width for both image and text */
-    }
-
-    .specialty-service-item {
-        width: calc(50% - 20px); /* Allow two items per row */
-    }
 }
 
-/* For 480px screen width */
-@media (max-width: 480px) {
-    .specialty-service-item {
-        width: 100%; /* Each item takes up a full row */
-        margin: 10px 0; /* Adjust the margin */
-    }
+#enterprise-section .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-/* For 320px screen width */
-@media (max-width: 320px) {
-    #specialty-pharmacy-services .section-text h2,
-    .specialty-service-item h2 {
-        font-size: 18px; /* Reduce the font size a bit for small screens */
-    }
-    
-    #specialty-pharmacy-services .section-text p {
-        font-size: 14px; /* Reduce paragraph text size for better fit */
-    }
+#enterprise-section .section-image-container {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
 }
 
+#enterprise-section .section-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#enterprise-section .section-text {
+    width: 100%;
+    padding: 20px;
+}
+
+#enterprise-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#enterprise-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#enterprise-image {
+    width: 200%;
+    padding: 100px;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    #enterprise-section .content-wrapper {
+        padding: 20px;
+    }
+
+    #enterprise-section .section-image-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #enterprise-section .section-text {
+        padding: 0;
+    }
+
+    #enterprise-section h2 {
+        font-size: 2em;
+    }
+
+    #enterprise-section p {
+        font-size: 1em;
+    }
+}
 
 /* Reviews Section */
 
