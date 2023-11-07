@@ -69,3 +69,24 @@ function toggleMenu() {
         }
     }
 }
+
+
+// Function to show the Oreyo chatbot popup
+function showOreyoPopup() {
+    var popup = document.getElementById("oreyo-popup");
+    popup.style.display = "block";
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 5000); // Popup disappears after 5 seconds
+}
+
+// Function to close the Oreyo chatbot popup
+function closeOreyoPopup() {
+    var popup = document.getElementById("oreyo-popup");
+    popup.style.display = "none";
+}
+
+// Show the popup when the page loads
+window.onload = function() {
+    setTimeout(showOreyoPopup, 2000); // Show popup after 2 seconds the page has loaded
+};
