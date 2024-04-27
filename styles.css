@@ -317,6 +317,22 @@ nav a:hover {
     height: 600px;
 }
 
+
+/* Adjustments for .new-hours-overlay */
+.new-hours-overlay {
+    position: absolute;
+    top: 50%; /* Align vertically to the middle */
+    right: 0; /* Align to the right side of the hero image container */
+    transform: translateY(-50%); /* Center the image vertically with respect to its own height */
+    max-width: 40%; /* Adjust this percentage based on your design preference */
+}
+
+/* Styles for the image inside .new-hours-overlay */
+.new-hours-overlay img {
+    width: 100%; /* The image will fill the .new-hours-overlay container */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
     #hero-image {
