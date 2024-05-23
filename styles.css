@@ -10,15 +10,16 @@ body {
     padding: 0;
     padding-bottom: 60px; 
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* This line is changed */
+    justify-content: flex-start;
     padding: 20px;
-    min-height: 500px; /* Adjust as needed */
+    min-height: 500px;
 }
 
 .section h2 {
@@ -51,22 +52,8 @@ body {
     width: 100%;
 }
 
-
-/* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    .section-container {
-        flex-direction: column;
-    }
-
-    .section-container img {
-        width: 80%;
-        max-width: 250px;
-        margin-bottom: 20px;
-    }
-}
-
 header {
-    background-color: #FFD700 ;
+    background-color: #FFD700;
     padding: 10px;
     height: 80px;
     text-align: center;
@@ -86,8 +73,6 @@ header {
     margin-right: 10px;
 }
 
-
-
 nav ul {
     position: relative;
     padding-right: 20px; 
@@ -103,18 +88,15 @@ nav ul li {
 nav ul li a {
     color: #404040;
     text-decoration: none;
-    font-weight: bold; /* Make the links bolder */
-    padding: 10px 15px; /* Add padding to each link */
+    font-weight: bold;
+    padding: 10px 15px;
     line-height: 30px;
-    margin: 0 5px; /* Add margin to each link */
-    font-size: 1em; /* Adjust the font size as needed */
+    margin: 0 5px;
+    font-size: 1em;
 }
 
-
-
 nav ul li.more li a {
-    /* Copy the styles from the other nav links here */
-    color:  #404040;
+    color: #404040;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -123,12 +105,11 @@ nav ul li.more li a {
     font-size: 0.8em;
 }
 
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 95%; /* Center the dropdown relative to the "more" link */
-    transform: translateX(-50%); /* Adjust the position to truly center it */
+    left: 95%;
+    transform: translateX(-50%);
     background-color: #FFD700;
     list-style: none;
     padding: 0;
@@ -139,7 +120,6 @@ nav ul li.more li a {
     display: none;
 }
 
-
 .more:hover .dropdown-menu {
     display: block;
 }
@@ -147,7 +127,6 @@ nav ul li.more li a {
 nav ul.active {
     display: flex;
 }
-
 
 nav a:hover {
     color: #D70040;
@@ -168,7 +147,7 @@ nav a:hover {
 }
 
 .bar {
-    background-color: #333;  /* change to your preferred color */
+    background-color: #333;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -177,20 +156,13 @@ nav a:hover {
 }
 
 .menu-toggle:hover .bar {
-    background-color: #555; /* slightly lighter shade on hover */
+    background-color: #555;
 }
 
-
-
-/* By default, hide the links under 'more-on-mobile' class */
 .more-on-mobile {
     display: none;
 }
 
-
-
-
-/* Styles for the mobile menu overlay */
 #mobile-menu-overlay {
     display: none;
     position: fixed;
@@ -198,28 +170,25 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Adjust the background color and opacity as needed */
-    z-index: 999; /* Ensure it's above other elements */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
 }
 
-/* Styles for the mobile menu when it's open */
 .navbar.open {
     display: block;
-    background-color: #fff; /* Change to the background color you want for the menu */
+    background-color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    z-index: 1000; /* Ensure it's above the overlay */
+    z-index: 1000;
 }
 
-
-/* On screens that are 600px or less, display the links */
 @media screen and (max-width: 600px) {
     .more-on-mobile {
-        display: block; /* or 'inline', 'flex', etc. depending on your layout */
+        display: block;
     }
 
     .more {
@@ -229,29 +198,20 @@ nav a:hover {
     .navbar {
         display: none;
     }
-}
 
-
-/* Mobile view: Links displayed under the header */
-@media only screen and (max-width: 600px) {
     nav ul {
-        position: fixed; /* Fixed position to keep it under the header */
-        top: 80px; /* Adjust as needed to align it below the header */
+        position: fixed;
+        top: 80px;
         left: 0;
         right: 0;
-        background-color: rgba(255, 215, 0, 0.8); /* Yellow with transparency */
-        padding: 10px 0; /* Adjust padding as needed */
+        background-color: rgba(255, 215, 0, 0.8);
+        padding: 10px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 999; /* Ensure it's above other content */
-        
+        z-index: 999;
     }
 }
-
-
-
-
 
 @keyframes preSlideIn {
     0% { top: -100px; }
@@ -263,7 +223,6 @@ nav a:hover {
     100% { top: 0; }
 }
 
-/* Oreyo Chatbot Popup Styles */
 .oreyo-popup {
     display: none;
     position: fixed;
@@ -298,45 +257,44 @@ nav a:hover {
     background-color: #bb0040;
 }
 
-
-
-
-
-
-
-
+#hero-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure children stretch to match height */
+    padding: 0; /* Remove padding to avoid white space */
+    margin-top: 80px; /* Add margin to push content below fixed header */
+}
 
 #hero-image {
-    position: relative;
-    background-image: linear-gradient(rgba(225, 225, 225, 0.0), rgba(225, 225, 225, 0.0)), url('happy-person-taking-medicine.png');
+    flex: 7; /* Adjust flex to take up 70% of the width */
+    background-image: url('happy-person-taking-medicine.png');
     background-size: cover;
     background-position: center;
-    color: #D70040;
-    margin-top: 40px;
-    text-align: center;
-    height: 600px;
+    height: 700px; /* Match the height of the Calendly widget */
+    margin: 0; /* Remove margin to avoid white space */
 }
 
-
-/* Adjustments for .new-hours-overlay */
-.new-hours-overlay {
-    position: absolute;
-    top: 50%; /* Align vertically to the middle */
-    right: 0; /* Align to the right side of the hero image container */
-    transform: translateY(-50%); /* Center the image vertically with respect to its own height */
-    max-width: 40%; /* Adjust this percentage based on your design preference */
+.calendly-inline-widget-container {
+    flex: 3; /* Adjust flex to take up 30% of the width */
+    height: 700px; /* Match the height of the hero image */
+    margin: 0; /* Remove margin to align with hero image */
+    overflow: hidden; /* Prevent any overflow issues */
 }
 
-/* Styles for the image inside .new-hours-overlay */
-.new-hours-overlay img {
-    width: 100%; /* The image will fill the .new-hours-overlay container */
-    height: auto; /* Maintain the image's aspect ratio */
-}
-
-/* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
+    #hero-image-container {
+        flex-direction: column;
+    }
+
     #hero-image {
-        height: 300px; /* Adjust the height as needed for mobile */
+        width: 100%;
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .calendly-inline-widget-container {
+        width: 100%;
+        height: 700px; /* Keep the original height for the widget */
+        margin-top: 20px;
     }
 }
 
@@ -353,7 +311,6 @@ nav a:hover {
     color: white;
 }
 
-
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -364,58 +321,38 @@ nav a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* This will create 4 columns of equal width */
-    gap: 20px; /* This adds a gap between the grid items, adjust as needed */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
-
 
 .service-item {
     background: #f9f9f9;
-    padding: 30px;  /* Increase this as needed */
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .service-item h3 {
-    font-size: 1.5em; /* Adjust size as needed */
+    font-size: 1.5em;
     color: black;
-
 }
 
 .service-item p {
-    font-size: 1.2em; /* Adjust size as needed */
+    font-size: 1.2em;
     color: black;
-
 }
 
 .service-item:hover {
-    transform: scale(1.05); /* Adjust scale factor as needed */
-    transition: transform 0.3s ease-in-out; /* Adjust timing as needed */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
-
-
 .service-item .service-image {
-    width: 50%; /* Adjust this as needed */
+    width: 50%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.service-item:hover .hover-text {
-    display: block;
-}
-
-.hover-text {
-    display: none;
-    position: absolute;
-    /* Add other styles as necessary (background color, text color, etc.) */
-}
-
-.service-item:hover .hover-text {
-    display: block;
 }
 
 .service-item .service-description .long-description {
@@ -430,60 +367,11 @@ nav a:hover {
     display: block;
 }
 
-
-
-
-
-
-
 @media only screen and (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
     }
 }
-
-
-@media only screen and (max-width: 600px) {
-    header {
-        padding: 5px;
-    }
-    .service-container, .product-container {
-        flex-direction: column;
-    }
-
-    .service-image-container, .product-image-container {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .service-text-container, .product-text-container {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-/* Home Delivery Section */
-
-#home-delivery-services .content-wrapper {
-    display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: space-between; /* Add space between the image and text */
-    color: #D70040;
-}
-
-#home-delivery-services .section-image {
-    width: 50%; /* Adjust as needed */
-    max-width: 500px; /* Adjust as needed */
-    height: auto;
-}
-
-#home-delivery-services .section-text {
-    width: 45%; /* Adjust as needed */
-    text-align: left;
-}
-
-
-/* MedsOnCue Section */
 
 #MedsOnCue .med-images {
     display: flex;
@@ -494,57 +382,41 @@ nav a:hover {
     width: 45%;
     height: auto;
     border: 5px solid #000;
-    transition: transform 0.3s ease; /* to create smooth effect */
+    transition: transform 0.3s ease;
 }
 
-/* Media Queries for Mobile Views */
 @media (max-width: 600px) {
     #MedsOnCue .med-images {
         flex-direction: column;
-        align-items: center; /* center the images when they are stacked */
+        align-items: center;
     }
     
     #MedsOnCue img {
-        width: 90%; /* Adjust as needed to make images bigger */
-        margin-bottom: 15px; /* spacing between images */
+        width: 90%;
+        margin-bottom: 15px;
     }
 }
-
-@media (max-width: 480px) {
-    #MedsOnCue img {
-        width: 95%; /* Adjust as needed */
-    }
-}
-
-/* For 320px, the styles from the 480px media query can apply as well unless there are additional specific changes desired for that size */
-
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-
-
-/* Building Enterprise Section */
-
-/* Enterprise Section */
 #enterprise-section {
     text-align: center;
     padding: 40px;
     background-color: #D70040;
-
 }
 
 #enterprise-section .content-wrapper {
     display: flex;
-    flex-direction: column; /* Change to column for mobile */
+    flex-direction: column;
     align-items: center;
 }
 
 #enterprise-section .section-image-container {
     width: 100%;
-    max-width: 100%; /* Adjust as needed */
+    max-width: 100%;
     margin-bottom: 20px;
 }
 
@@ -577,7 +449,6 @@ img {
     max-width: 30%;
 }
 
-/* Media Queries for Mobile Devices */
 @media only screen and (max-width: 600px) {
     #enterprise-section .content-wrapper {
         padding: 20px;
@@ -601,13 +472,9 @@ img {
     }
 }
 
-/* Reviews Section */
-
 #reviews {
     padding: 20px;
     text-align: center;
-    /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
-    /* color: #D70040; */
 }
 
 #reviews h2 {
@@ -617,9 +484,10 @@ img {
 
 .reviews-container {
     display: flex;
-    justify-content: flex-start; /* Change this to 'flex-start' to make them fit in one row */
+    flex-direction: column; /* Change to column to prevent horizontal scrolling */
     gap: 20px;
-    overflow-x: auto; /* Enable horizontal scroll on small screens */
+    overflow-x: hidden; /* Ensure no horizontal scroll */
+    max-width: 100%; /* Ensure the container does not exceed viewport width */
     color: black;
 }
 
@@ -628,8 +496,8 @@ img {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    min-width: 300px; /* Set a minimum width for each review item */
-    max-width: 100%; /* Ensure each item doesn't exceed the container's width */
+    min-width: 300px;
+    max-width: 100%;
 }
 
 .review-item h3 {
@@ -639,7 +507,6 @@ img {
 .review-item p {
     font-size: 1.2em;
 }
-
 
 .review-item .review-text .long-review {
     display: none;
@@ -653,22 +520,16 @@ img {
     display: block;
 }
 
-
-
 @media only screen and (max-width: 600px) {
     .reviews-container {
         flex-direction: column;
     }
 }
 
-
-/* Transfer Patient Form Section */
-
 #transfer-patient-form {
     width: 100%;
     margin: auto;
     text-align: center;
-    /* background-color: #D70040; */
     padding: 50px 0;
     color: #D70040;
 }
@@ -686,27 +547,24 @@ img {
 #transfer-patient-form label {
     display: block;
     margin-bottom: 5px;
-    /* color: white; */
 }
 
 #transfer-patient-form input[type="text"],
 #transfer-patient-form input[type="tel"],
 #transfer-patient-form input[type="date"],
 #transfer-patient-form textarea {
-    width: 50%; /* Make the input fields 50% smaller */
+    width: 50%;
     padding: 10px;
-    /* color: white; */
-    /* background-color: #D70040; */
     border: 5px solid #D70040;
 }
 
 #transfer-patient-form textarea {
-    resize: vertical; /* Allow vertical resizing for the textarea */
+    resize: vertical;
 }
 
 #transfer-patient-form button {
     padding: 10px 20px;
-    background-color:  #D70040;
+    background-color: #D70040;
     color: white;
     border: none;
     border-radius: 5px;
@@ -715,39 +573,33 @@ img {
 }
 
 #transfer-patient-form button:hover {
-    background-color:  #D70040;
+    background-color: #bb0040;
 }
 
-
-#locations{
+#locations {
     background-color: #D70040;
     color: white;
-    
 }
 
 #viva-location-image {
     max-width: 100%;
     height: auto;
-    max-height: 100px; /* Adjust the maximum height as needed */
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    max-height: 100px;
+    margin-bottom: 10px;
 }
-
-
 
 #nova-location-image {
     max-width: 100%;
     height: auto;
-    max-height: 200px; /* Adjust the maximum height as needed */
-    margin-bottom: 10px; /* Adjust the margin as needed */
+    max-height: 200px;
+    margin-bottom: 10px;
 }
-
 
 .locations-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 
 .location {
     text-align: center;
@@ -760,24 +612,19 @@ img {
     justify-content: center;
 }
 
-
 .location-details {
     text-align: center;
 }
 
-/* Locations Section */
 .location-details a {
-    color: inherit; /* Use the default text color */
-    text-decoration: none; /* Remove underline */
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Optional: Add hover styles for better user feedback */
 .location-details a:hover {
-    text-decoration: underline; /* Add underline on hover if desired */
+    text-decoration: underline;
 }
 
-
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .locations-container {
         display: block;
@@ -797,15 +644,10 @@ img {
     }
 }
 
-
-
-/* Contact Us Section */
-
 #contact {
-    /* background: linear-gradient(to right, #f2e6ff, #e6e6ff); */
     padding: 20px;
     text-align: center;
-    height: 200px; /* Reduced height */
+    height: 200px;
     background-color: white;
     color: black;
 }
@@ -823,7 +665,6 @@ img {
     margin-bottom: 10px;
     padding: 10px;
     width: 80%;
-
 }
 
 textarea {
@@ -844,29 +685,24 @@ textarea {
     background-color: #D70040;
 }
 
-
 footer {
     display: flex;
-    justify-content: center; /* Horizontally centers content */
-    align-items: center;     /* Vertically centers content */
-    height: 100px;           /* Adjust the height as necessary */
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     background-color: #D70040;
-    color: white
-;
-
+    color: white;
 }
 
 .footer-content {
     text-align: center;
 }
 
-
 @media only screen and (max-width: 600px) {
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  }
-
+}
 
 @media only screen and (min-width: 600px) {
     header {
@@ -887,7 +723,7 @@ footer {
         height: auto;
     }
 
-     nav ul li {
+    nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
     }
@@ -897,10 +733,6 @@ footer {
     }
 }
 
-
-
-
-/* Assuming 768px is the breakpoint for mobile devices. You can adjust as needed. */
 @media (min-width: 600px) {
     .mobile-text {
         display: none;
@@ -915,28 +747,9 @@ footer {
         display: block;
     }
 }
-
-
-/* Assuming 768px is the breakpoint for mobile devices. Adjust if needed. */
-@media (min-width: 600px) {
-    .mobile-text {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .desktop-text {
-        display: none;
-    }
-    .mobile-text {
-        display: block;
-    }
-}
-
 
 @media screen and (max-width: 600px) {
-    /* Adjust JotForm's styling for mobile view */
     #jotform-container {
-        margin-top: 80px; /* Add space between header and JotForm on mobile */
+        margin-top: 80px;
     }
 }

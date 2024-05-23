@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVA Pharmacy and Wellness</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -9,8 +11,8 @@
 <body>
     <div id="mobile-menu-overlay"></div>
     <header id="myHeader">
-        <img src="img/logo1.png" alt="Logo" class="logo">
-        <button class="menu-toggle">
+        <img src="img/logo1.png" alt="VIVA Pharmacy and Wellness Logo" class="logo">
+        <button class="menu-toggle" aria-label="Toggle Menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -18,9 +20,9 @@
         
         <nav class="navbar">
             <ul>
-                <li><a href="refill-pescription.html">Refill My Prescription</a></li>
+                <li><a href="refill-prescription.html">Refill My Prescription</a></li>
                 <li><a href="transfer.html">Patient Transfer Form</a></li>
-                <li><a href="https://app.digitalpharmacist.com/assessment-form/?configId=36cdfe6f-6236-4ef0-b26a-15b9aa19d710" target="_blank">Schedule a Vaccine Appointment</a></li>
+                <li><a href="https://app.digitalpharmacist.com/assessment-form/?configId=36cdfe6f-6236-4ef0-b26a-15b9aa19d710" target="_blank" rel="noopener noreferrer">Schedule a Vaccine Appointment</a></li>
                 <li><a href="https://vivajacksonheights.myshopify.com/" target="_blank" rel="noopener noreferrer">Online Store</a></li>
                 <li><a href="#services">Services</a></li>
                 <div class="more-on-mobile">
@@ -31,7 +33,7 @@
                     <li><a href="#contact">Contact Us</a></li>
                 </div>
                 <li class="more">
-                    <a href="">More</a>
+                    <a href="#">More</a>
                     <ul class="dropdown-menu">
                         <li><a href="index.html#MedsOnCue">My Medication Videos</a></li>
                         <li><a href="#enterprise-section">Building an Enterprise</a></li>
@@ -53,10 +55,12 @@
         </div>
     </div>
     
-    <!-- Hero Image with New Hours Overlay -->
-    <div id="hero-image">
-        <div class="new-hours-overlay">
-            <img src="new-hours.png" alt="New Hours of Operation">
+    <!-- Hero Image with Calendly Embed -->
+    <div id="hero-image-container">
+        <div id="hero-image"></div>
+        <div class="calendly-inline-widget-container">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/vivajacksonheights/express-prescription-pickup" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
     </div>
 
@@ -64,31 +68,26 @@
     <section id="services" class="section">
         <h2>How may we assist you?</h2>
         <div class="services-grid">
-
             <div class="service-item">
                 <img src="health-screening.png" alt="Health Screenings" class="service-image">
                 <h3>Health Screenings</h3>
                 <p>Our health screening services are designed to help identify risk factors and health conditions early when they are more manageable.</p>
             </div>
-
             <div class="service-item">
                 <img src="immunizations.png" alt="Immunizations" class="service-image">
                 <h3>Immunizations</h3>
                 <p>We offer a wide variety of immunizations to help protect you and your family from various diseases and illnesses.</p>
             </div>
-
             <div class="service-item">
                 <img src="multi-dose-pack.png" alt="Multi-Dose Packaging" class="service-image">
                 <h3>Multi-Dose Packaging</h3>
                 <p>We offer multi-dose packaging services to help manage multiple medications more effectively and ensure you never miss a dose.</p>
             </div>
-
             <div class="service-item">
                 <img src="travel-vaccination.png" alt="Travel Vaccinations" class="service-image">
                 <h3>Travel Vaccinations</h3>
                 <p>We provide a range of travel vaccinations to ensure you stay healthy while travelling abroad.</p>
             </div>
-
             <div class="service-item">
                 <img src="low-cost1.png" alt="Low-Cost Pharmacy Services" class="service-image">
                 <h3>Low-Cost Pharmacy Services</h3>
@@ -97,26 +96,21 @@
                     <p class="long-description">Our experienced staff is committed to finding ways to help you save money without sacrificing the quality of care you receive. VIVA Pharmacy & Wellness is a NYS Medicaid Pharmacy Provider and is contracted with most third party prescription plans , even beating prices suggested by GoodRx.</p>
                 </div>
             </div>
-
             <div class="service-item">
                 <img src="passport-photo.png" alt="Passport Photo Services" class="service-image">
                 <h3>Passport Photo Services on Site</h3>
                 <p>Get professional-quality passport photos taken and printed on-site for all your travel needs.</p>
             </div>
-
-            <!-- Home Delivery Services available -->
             <div class="service-item">
                 <img src="home-delivery.png" alt="Home Delivery Services" class="service-image">
                 <h3>Home Delivery Services Available</h3>
                 <p>We offer convenient home delivery services for your prescriptions and other healthcare products.</p>
             </div>
-        
-            <!-- We are Your Vaccination Destination! -->
             <div class="service-item">
                 <img src="vaccination-destination.png" alt="Vaccination Destination" class="service-image">
                 <h3>We are Your Vaccination Destination!</h3>
                 <p>From routine vaccines to specialized immunizations, we are your go-to destination for all your vaccination needs.</p>
-            </div>  
+            </div>
         </div>
     </section>  
 
@@ -124,148 +118,125 @@
     <section id="MedsOnCue" class="section">
         <h2>My Medication Videos</h2>
         <div class="med-images">
-            <img src="medsoncue-english.png" alt="First image description">
-            <img src="medsoncue-spanish.png" alt="Second image description">
+            <img src="medsoncue-english.png" alt="MedsOnCue in English">
+            <img src="medsoncue-spanish.png" alt="MedsOnCue in Spanish">
         </div>
     </section>
 
     <!-- New Section with Image Container and Text -->
-<section id="enterprise-section" class="section">
-    <div class="content-wrapper">
-        <!-- Image Container -->
-        <div id="enterprise-image" class="image-container">
-            <img src="enterprise.png" alt="Enterprise Image">
+    <section id="enterprise-section" class="section">
+        <div class="content-wrapper">
+            <div id="enterprise-image" class="image-container">
+                <img src="enterprise.png" alt="Building an Enterprise">
+            </div>
+            <div class="text-container">
+                <h2>Building an Enterprise!</h2>
+                <p>Discover the VIVA Pharmacy & Wellness difference. For over 8 years, we've dedicated ourselves to seamless healthcare experiences. Our modern pharmacy offers personalized care, cutting-edge technology, and multilingual support. With easy-to-read labels, our commitment empowers you to take charge of your health. Our devoted team ensures personalized service, expert advice, and lasting relationships. Experience streamlined processes, advanced systems, and compassionate care. Trust VIVA Pharmacy & Wellness – Your Partner in Wellness, Where Technology Meets Compassionate Care.</p>
+            </div>
         </div>
+    </section>
 
-        <!-- Text Container -->
-        <div class="text-container">
-            <h2>Building an Enterprise!</h2>
-            <p>Discover the VIVA Pharmacy & Wellness difference. For over 8 years, we've dedicated ourselves to seamless healthcare experiences. Our modern pharmacy offers personalized care, cutting-edge technology, and multilingual support. With easy-to-read labels, our commitment empowers you to take charge of your health. Our devoted team ensures personalized service, expert advice, and lasting relationships. Experience streamlined processes, advanced systems, and compassionate care. Trust VIVA Pharmacy & Wellness – Your Partner in Wellness, Where Technology Meets Compassionate Care.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Reviews Section-->
+    <!-- Reviews Section -->
     <section id="reviews" class="section">
         <h2>Reviews</h2>
         <div class="reviews-container">
             <div class="review-item">
                 <h3>Michael P.</h3>
-                <img src="img/five-stars.png" alt="5 star rating" />
+                <img src="img/five-stars.png" alt="5 star rating">
                 <div class="review-text">
                     <p class="short-review">"Michelle and her staff go above and beyond in providing an overall great experience.."</p>
-                    <p class="long-review">"Michelle and her staff go above and beyond in providing an overall great experience. The place is neat, clean, organized and has a nice feel. Employees are friendly. Wait time is much shorter than at the major chain pharmacies and prices are better too. Most importantly the time spent going over questions and concerns is the best I have ever seen from any pharmacy,. They really take the time and effort to make sure you are made to feel important, not rushed and satisfied each and every time. A throwback to the old fashioned neighborhood pharmacies from way back in the day."</p>
+                    <p class="long-review">"Michelle and her staff go above and beyond in providing an overall great experience. The place is neat, clean, organized and has a nice feel. Employees are friendly. Wait time is much shorter than at the major chain pharmacies and prices are better too. Most importantly the time spent going over questions and concerns is the best I have ever seen from any pharmacy. They really take the time and effort to make sure you are made to feel important, not rushed and satisfied each and every time. A throwback to the old fashioned neighborhood pharmacies from way back in the day."</p>
                 </div>
             </div>
             <div class="review-item">
-                    <h3>Ish A.</h3>
-                    <img src="img/five-stars.png" alt="5 star rating" />
-                    <div class="review-text">
-                        <p class="short-review">"I’ve been using this pharmacy for over 2 years when I lived in Jackson heights. I’ve always found them to super professional..."</p>
-                        <p class="long-review">"I’ve been using this pharmacy for over 2 years when I lived in Jackson heights. I’ve always found them to super professional, efficient and above all nice and caring. When I told them I’m moving out of the area they suggested that they would deliver any urgent medications especially ones for the children right away. During covid-19 pandemic they did the same and remained ever professional. I would highly recommend them."</p>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <h3>Vanessa Garcia</h3>
-                    <img src="img/five-stars.png" alt="5 star rating" />
-
-                    <div class="review-text">
-                    <p class="short-review">"Great pharmacy!!! Great staff. Always have my medicines in 15-30 min and they also deliver your medicine to your home for Free which..."</p>
+                <h3>Ish A.</h3>
+                <img src="img/five-stars.png" alt="5 star rating">
+                <div class="review-text">
+                    <p class="short-review">"I’ve been using this pharmacy for over 2 years when I lived in Jackson heights. I’ve always found them to super professional..."</p>
                     <p class="long-review">"I’ve been using this pharmacy for over 2 years when I lived in Jackson heights. I’ve always found them to super professional, efficient and above all nice and caring. When I told them I’m moving out of the area they suggested that they would deliver any urgent medications especially ones for the children right away. During covid-19 pandemic they did the same and remained ever professional. I would highly recommend them."</p>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <h3>Morzina K.</h3>
-                    <img src="img/five-stars.png" alt="5 star rating" />
-
-                    <div class="review-text">
-                        <p class="short-review">"Staffs are very friendly and helpful also welcoming especially Michelle, you are amazing!!! It’s a great pharmacy! I highly recommend this pharmacy to everyone."</p>
-                        <p class="long-review">"Staffs are very friendly and helpful also welcoming especially Michelle, you are amazing!!! It’s a great pharmacy! I highly recommend this pharmacy to everyone."</p>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <h3>Al Faidi</h3>
-                    <img src="img/five-stars.png" alt="5 star rating" />
-
-                    <div class="review-text">
-                        <p class="short-review">"Great ppl, super helpful and friendly staff. My wife, my son, and myself are super appreciative to their work ethics."</p>
-                        <p class="long-review">"Great ppl, super helpful and friendly staff. My wife, my son, and myself are super appreciative to their work ethics. We at a personal level had and still have great experience with the pharmacist Michelle as well as her staff. They care about health and never hesitate to give up recommendations and direction when needed. I'm happy to consider them my pharmacy. Thank you guys for being so awesome."</p>
-                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Locations Section -->
-        <section id="locations" class="section">
-            <h2>Our Locations</h2>
-            <div class="locations-container">
-                <div class="location">
-                    <div class="location-image-container">
-                        <img id="viva-location-image" src="viva.png" alt="Location 1 Image">
-                    </div>
-                    <div id="viva-location-details" class="location-details">
-                        <h3>VIVA Pharmacy and Wellness</h3>
-                        <p><strong>Address:</strong> 80-14 Northern Blvd, Queens, NY 11372</p>
-                        <p><strong>Phone:</strong> (718) 450-9595</p>
-                        <p style="word-wrap: break-word;">
-                            VIVA Pharmacy and Wellness is our flagship store, dedicated to providing comprehensive healthcare services to the vibrant community of Queens, New York. Located at 80-14 Northern Blvd, Queens, NY 11372, our main store serves as a trusted healthcare destination for our valued customers...
-                        </p>
-                    </div>
+            <div class="review-item">
+                <h3>Vanessa Garcia</h3>
+                <img src="img/five-stars.png" alt="5 star rating">
+                <div class="review-text">
+                    <p class="short-review">"Great pharmacy!!! Great staff. Always have my medicines in 15-30 min and they also deliver your medicine to your home for Free which..."</p>
+                    <p class="long-review">"Great pharmacy!!! Great staff. Always have my medicines in 15-30 min and they also deliver your medicine to your home for Free which is very convenient. I would highly recommend them to everyone."</p>
                 </div>
-                <div class="location">
-                    <div class="location-image-container">
-                        <img id="nova-location-image" src="nova.png" alt="Location 2 Image">
-                    </div>
-                    <div class="location-details">
-                        <h3>Nova Q Health</h3>
-                        <p><strong>Address:</strong> 104-01 Northern Blvd, Queens, NY 11368</p>
-                        <p><strong>Phone:</strong> (646) 809-9595</p>
-                        <p style="word-wrap: break-word;">
-                            Introducing Nova Q Health, our new store designed to elevate your healthcare experience. Located at 104-01 Northern Blvd, Queens, NY 11368, Nova Q Health is redefining healthcare accessibility and convenience...
-                        </p>
-                    </div>
+            </div>
+            <div class="review-item">
+                <h3>Morzina K.</h3>
+                <img src="img/five-stars.png" alt="5 star rating">
+                <div class="review-text">
+                    <p class="short-review">"Staffs are very friendly and helpful also welcoming especially Michelle, you are amazing!!! It’s a great pharmacy! I highly recommend this pharmacy to everyone."</p>
+                    <p class="long-review">"Staffs are very friendly and helpful also welcoming especially Michelle, you are amazing!!! It’s a great pharmacy! I highly recommend this pharmacy to everyone."</p>
                 </div>
-                <!-- Add more locations as needed with descriptions -->
             </div>
-        </section>
-        
-        
-
-
-
-         <!-- Contact Us Section -->
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <p>© 2023 VIVA Pharmacy and Wellness</p>
+            <div class="review-item">
+                <h3>Al Faidi</h3>
+                <img src="img/five-stars.png" alt="5 star rating">
+                <div class="review-text">
+                    <p class="short-review">"Great ppl, super helpful and friendly staff. My wife, my son, and myself are super appreciative to their work ethics."</p>
+                    <p class="long-review">"Great ppl, super helpful and friendly staff. My wife, my son, and myself are super appreciative to their work ethics. We at a personal level had and still have great experience with the pharmacist Michelle as well as her staff. They care about health and never hesitate to give up recommendations and direction when needed. I'm happy to consider them my pharmacy. Thank you guys for being so awesome."</p>
+                </div>
             </div>
-        </footer>
-        <script>
-            window.embeddedChatbotConfig = {
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="section">
+        <h2>Our Locations</h2>
+        <div class="locations-container">
+            <div class="location">
+                <div class="location-image-container">
+                    <img id="viva-location-image" src="viva.png" alt="VIVA Pharmacy and Wellness">
+                </div>
+                <div id="viva-location-details" class="location-details">
+                    <h3>VIVA Pharmacy and Wellness</h3>
+                    <p><strong>Address:</strong> 80-14 Northern Blvd, Queens, NY 11372</p>
+                    <p><strong>Phone:</strong> (718) 450-9595</p>
+                    <p>VIVA Pharmacy and Wellness is our flagship store, dedicated to providing comprehensive healthcare services to the vibrant community of Queens, New York. Located at 80-14 Northern Blvd, Queens, NY 11372, our main store serves as a trusted healthcare destination for our valued customers...</p>
+                </div>
+            </div>
+            <div class="location">
+                <div class="location-image-container">
+                    <img id="nova-location-image" src="nova.png" alt="Nova Q Health">
+                </div>
+                <div class="location-details">
+                    <h3>Nova Q Health</h3>
+                    <p><strong>Address:</strong> 104-01 Northern Blvd, Queens, NY 11368</p>
+                    <p><strong>Phone:</strong> (646) 809-9595</p>
+                    <p>Introducing Nova Q Health, our new store designed to elevate your healthcare experience. Located at 104-01 Northern Blvd, Queens, NY 11368, Nova Q Health is redefining healthcare accessibility and convenience...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 VIVA Pharmacy and Wellness</p>
+        </div>
+    </footer>
+    
+    <script>
+        window.embeddedChatbotConfig = {
             chatbotId: "5tbb0VFrFgwPNhR8_iICg",
             domain: "www.chatbase.co"
-            }
-            </script>
-            <script
-            src="https://www.chatbase.co/embed.min.js"
-            chatbotId="5tbb0VFrFgwPNhR8_iICg"
-            domain="www.chatbase.co"
-            defer>
-        </script>
-
-        <!-- Scripts-->
-        <script src="main.js"></script>
-    
-
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="5tbb0VFrFgwPNhR8_iICg" domain="www.chatbase.co" defer></script>
+    <script src="main.js"></script>
 </body>
 </html>
