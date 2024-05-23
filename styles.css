@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+
+#hero-image-container {
+    width: 100%; /* Ensure the container takes full width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -263,21 +269,12 @@ nav a:hover {
     align-items: stretch; /* Ensure children stretch to match height */
     padding: 0; /* Remove padding to avoid white space */
     margin-top: 80px; /* Add margin to push content below fixed header */
-}
-
-
-#hero-image-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Ensure children stretch to match height */
-    padding: 0; /* Remove padding to avoid white space */
-    margin-top: 80px; /* Add margin to push content below fixed header */
     width: 100%; /* Ensure the container takes full width */
 }
 
 #hero-image {
     flex: 7; /* Adjust flex to take up 70% of the width */
-    background-image: url('happy-person-taking-medicine.png');
+    background-image: url('hero-image.jpeg');
     background-size: cover;
     background-position: center;
     height: 700px; /* Match the height of the Calendly widget */
@@ -309,9 +306,6 @@ nav a:hover {
         margin-top: 20px;
     }
 }
-
-
-
 
 #services {
     text-align: center;
@@ -485,111 +479,75 @@ img {
         font-size: 1em;
     }
 }
+
 #reviews {
-    padding: 20px;
     text-align: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
 }
 
 #reviews h2 {
     font-size: 2.5em;
-    color: black;
     margin-bottom: 20px;
+    color: #D70040;
 }
 
 .reviews-container {
     display: flex;
-    justify-content: flex-start; /* Align items to start */
+    flex-wrap: nowrap; /* Prevent wrapping */
     gap: 20px;
-    overflow-x: auto; /* Enable horizontal scroll */
-    color: black;
-    padding: 0 10px; /* Optional: add padding for better appearance */
-    white-space: nowrap; /* Prevent items from wrapping to the next line */
+    overflow-x: auto; /* Add horizontal scrolling */
+    width: 100%; /* Ensure it does not exceed the viewport width */
 }
 
 .review-item {
-    background: #ffffff;
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    min-width: calc(33.333% - 20px); /* Set width to show 3 items at a time with gaps */
-    flex: 0 0 calc(33.333% - 20px); /* Ensure flex-basis matches min-width */
-    display: inline-block; /* Display as inline block to allow horizontal scrolling */
-    white-space: normal; /* Allow text to wrap inside the card */
-    scroll-snap-align: start; /* Align each card to the start */
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 items per row with gap */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.review-item:hover {
-    transform: translateY(-10px); /* Lift the card slightly on hover */
+.review-text {
+    width: 100%; /* Ensure the review text takes the full width of the review item */
+    word-wrap: break-word; /* Allow long words to break and wrap */
+    overflow-wrap: break-word; /* Ensure proper wrapping */
 }
 
 .review-item h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    color: #333;
 }
 
 .review-item img {
+    width: 100px;
+    height: auto;
     margin-bottom: 10px;
 }
 
 .review-item p {
-    font-size: 1em;
-    margin: 10px 0; /* Add some margin for better readability */
-}
-
-.review-item .review-text .short-review {
-    display: none;
-}
-
-.review-item .review-text .long-review {
-    display: block;
-}
-
-@media only screen and (max-width: 900px) {
-    .review-item {
-        min-width: calc(50% - 20px); /* Show 2 items at a time on smaller screens */
-        flex: 0 0 calc(50% - 20px);
-    }
-
-    .review-item .review-text .short-review {
-        display: block;
-    }
-
-    .review-item .review-text .long-review {
-        display: none;
-    }
-
-    .review-item:hover .review-text .short-review {
-        display: none;
-    }
-
-    .review-item:hover .review-text .long-review {
-        display: block;
-    }
+    font-size: 1.1em;
+    color: #555;
 }
 
 @media only screen and (max-width: 600px) {
+    .reviews-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .review-item {
-        min-width: calc(100% - 20px); /* Show 1 item at a time on very small screens */
-        flex: 0 0 calc(100% - 20px);
+        flex: 0 0 100%; /* Take full width on mobile */
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
-    .review-item .review-text .short-review {
-        display: block;
-    }
-
-    .review-item .review-text .long-review {
-        display: none;
-    }
-
-    .review-item:hover .review-text .short-review {
-        display: none;
-    }
-
-    .review-item:hover .review-text .long-review {
-        display: block;
+    .review-item:not(:last-child) {
+        margin-right: 10px; /* Add some space between the review items */
     }
 }
+
 
 #transfer-patient-form {
     width: 100%;
