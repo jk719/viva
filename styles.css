@@ -311,8 +311,9 @@ nav a:hover {
 
 @media (max-width: 600px) {
     .alert-banner {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 18px;
+        padding-top: 10px;
+        margin-top: 10px;
     }
 
     .alert-banner p {
