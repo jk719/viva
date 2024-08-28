@@ -88,7 +88,7 @@ function toggleCalendly(event) {
             if (btn.getAttribute('data-calendly') === 'spikevax') {
                 btn.textContent = 'Pediatric SPIKEVAX Vaccine';
             } else if (btn.getAttribute('data-calendly') === 'other-vaccines') {
-                btn.textContent = 'Hepatitis B, MMR, & Other Vaccines';
+                btn.textContent = 'Adult Covid-19, Flu, Hepatitis B, MMR, & Other Vaccines';
             }
         }
     });
@@ -104,7 +104,7 @@ function toggleCalendly(event) {
         if (targetId === 'spikevax') {
             button.textContent = 'Pediatric SPIKEVAX Vaccine';
         } else if (targetId === 'other-vaccines') {
-            button.textContent = 'Hepatitis B, MMR, & Other Vaccines';
+            button.textContent = 'Adult Covid-19, Flu, Hepatitis B, MMR, & Other Vaccines';
         }
     }
 }
@@ -156,6 +156,10 @@ if (menuToggle) {
 document.querySelectorAll('.btn-vaccine').forEach(button => {
     button.addEventListener('click', toggleCalendly);
 });
+
+
+
+
 
 // Show the popup when the page loads
 window.onload = function() {
