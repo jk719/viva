@@ -32,21 +32,6 @@ function hideMobileMenuOverlay() {
     mobileMenuOverlay.style.display = "none"; // Hide the overlay
 }
 
-// Add event listeners if elements exist
-var navLinks = document.querySelectorAll("nav a");
-if (navLinks.length) {
-    navLinks.forEach(function(navLink) {
-        navLink.addEventListener("click", function(event) {
-            if (window.innerWidth <= 600) {
-                toggleMenu(); // Close the menu on mobile devices
-            }
-        });
-    });
-}
-var menuToggle = document.querySelector(".menu-toggle");
-if (menuToggle) {
-    menuToggle.addEventListener("click", toggleMenu);
-}
 // Function to handle menu toggle on mobile devices
 function toggleMenu() {
     var nav = document.querySelector("nav.navbar");
@@ -70,7 +55,6 @@ function toggleMenu() {
     }
 }
 
-
 // Function to show the Oreyo chatbot popup
 function showOreyoPopup() {
     var popup = document.getElementById("oreyo-popup");
@@ -86,7 +70,95 @@ function closeOreyoPopup() {
     popup.style.display = "none";
 }
 
+// Function to handle Calendly dropdown toggle and button text change
+function toggleCalendly(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    const button = event.currentTarget;
+    const targetId = button.getAttribute('data-calendly');
+    const targetElement = document.getElementById(`calendly-${targetId}`);
+
+    // Hide any other active Calendly containers and reset buttons
+    document.querySelectorAll('.calendly-container').forEach(container => {
+        if (container !== targetElement) {
+            container.classList.remove('active');
+        }
+    });
+    document.querySelectorAll('.btn-vaccine').forEach(btn => {
+        if (btn !== button) {
+            if (btn.getAttribute('data-calendly') === 'spikevax') {
+                btn.textContent = 'Pediatric SPIKEVAX Vaccine';
+            } else if (btn.getAttribute('data-calendly') === 'other-vaccines') {
+                btn.textContent = 'Hepatitis B, MMR, & Other Vaccines';
+            }
+        }
+    });
+
+    // Toggle the visibility of the selected Calendly container
+    targetElement.classList.toggle('active');
+
+    // Change button text to "Done" when widget is visible, revert to original when hidden
+    if (targetElement.classList.contains('active')) {
+        button.textContent = 'Done';
+    } else {
+        // Revert the text based on the data-calendly attribute
+        if (targetId === 'spikevax') {
+            button.textContent = 'Pediatric SPIKEVAX Vaccine';
+        } else if (targetId === 'other-vaccines') {
+            button.textContent = 'Hepatitis B, MMR, & Other Vaccines';
+        }
+    }
+}
+
+// Add event listeners to the alert banner buttons
+document.querySelectorAll('.btn-vaccine').forEach(button => {
+    button.addEventListener('click', toggleCalendly);
+});
+
+
+// Add event listeners to the alert banner buttons
+document.querySelectorAll('.btn-vaccine').forEach(button => {
+    button.addEventListener('click', toggleCalendly);
+});
+
+
+// Add event listeners to the alert banner buttons
+document.querySelectorAll('.btn-vaccine').forEach(button => {
+    button.addEventListener('click', toggleCalendly);
+});
+
+
+// Show the alert banner with a sliding effect
+function showAlertBanner() {
+    const alertBanner = document.querySelector('.alert-banner');
+    setTimeout(() => {
+        alertBanner.classList.add('show');
+    }, 500); // Delay to allow the navbar to load first
+}
+
+// Add event listeners for internal link clicks
+var navLinks = document.querySelectorAll("nav a");
+if (navLinks.length) {
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener("click", function(event) {
+            if (window.innerWidth <= 600) {
+                toggleMenu(); // Close the menu on mobile devices
+            }
+        });
+    });
+}
+
+var menuToggle = document.querySelector(".menu-toggle");
+if (menuToggle) {
+    menuToggle.addEventListener("click", toggleMenu);
+}
+
+// Add event listeners to the alert banner buttons
+document.querySelectorAll('.btn-vaccine').forEach(button => {
+    button.addEventListener('click', toggleCalendly);
+});
+
 // Show the popup when the page loads
 window.onload = function() {
-    setTimeout(showOreyoPopup, 2000); // Show popup after 2 seconds the page has loaded
+    setTimeout(showOreyoPopup, 1000); // Show popup after 2 seconds the page has loaded
+    showAlertBanner(); // Show alert banner with sliding effect
 };

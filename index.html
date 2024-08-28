@@ -54,6 +54,26 @@
             <button id="close-popup" onclick="closeOreyoPopup()">Got it</button>
         </div>
     </div>
+
+  <!-- Alert Banner -->
+<div class="alert-banner">
+    <p>Next Appointment Available for Vaccines:</p>
+    <a href="#" class="btn-vaccine" data-calendly="spikevax">Pediatric SPIKEVAX Vaccine</a>
+    <a href="#" class="btn-vaccine" data-calendly="other-vaccines">Hepatitis B, MMR, & Other Vaccines</a>
+</div>
+
+<!-- Calendly Embeds (Initially Hidden) -->
+<div id="calendly-spikevax" class="calendly-container">
+    <!-- Calendly inline widget for Pediatric SPIKEVAX Vaccine -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/vivajacksonheights/pediatric-spikevax-vaccine" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>
+<div id="calendly-other-vaccines" class="calendly-container">
+    <!-- Calendly inline widget for Hepatitis B, MMR, & Other Vaccines -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/vivajacksonheights/vaccine-appointments" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>
+
     
     <!-- Hero Image with Calendly Embed -->
     <div id="hero-image-container">
@@ -231,7 +251,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>© 2023 VIVA Pharmacy and Wellness</p>
+            <!-- Footer content here -->
         </div>
     </footer>
     

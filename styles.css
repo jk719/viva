@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-
 #hero-image-container {
     width: 100%; /* Ensure the container takes full width */
     overflow-x: hidden; /* Prevent horizontal overflow */
@@ -14,7 +13,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
+    padding-top: 90px; /* Adjust padding to accommodate the fixed alert banner */
     font-family: 'Lato', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -59,18 +59,19 @@ body {
 }
 
 header {
+    top: 0; /* Header stays at the top */
     background-color: #FFD700;
     padding: 10px;
     height: 80px;
     text-align: center;
     position: fixed;
-    top: 0;
+    top: 60px; /* Position the header below the alert banner */
     width: 100%;
     animation: preSlideIn 1s forwards, slideIn 1s 1s forwards;
     display: flex;
     align-items: center;
     z-index: 1000;
-    opacity: .8; 
+    opacity: .8;
 }
 
 .logo {
@@ -263,14 +264,96 @@ nav a:hover {
     background-color: #bb0040;
 }
 
+
+.alert-banner {
+    background-color: #D70040;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    position: relative;
+    width: 100%;
+    z-index: 999; /* Ensure it's above other content */
+    opacity: 0; /* Start with the banner hidden */
+    transform: translateY(-100%); /* Start above the screen */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Add easing effect */
+}
+
+.alert-banner.show {
+    opacity: 1; /* Make the banner visible */
+    transform: translateY(0); /* Slide the banner down */
+}
+
+.alert-banner p {
+    margin: 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.alert-banner .btn-vaccine {
+    background-color: white;
+    color: #404040;
+    padding: 10px 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    min-width: 200px; /* Ensure buttons maintain a consistent size */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.alert-banner .btn-vaccine:hover {
+    background-color: #FFD700;
+}
+
+@media (max-width: 600px) {
+    .alert-banner {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .alert-banner p {
+        display: block;
+        margin-bottom: 10px; /* Add spacing between text and buttons */
+    }
+
+    .alert-banner .btn-vaccine {
+        padding: 8px 15px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
 #hero-image-container {
     display: flex;
     justify-content: space-between;
     align-items: stretch; /* Ensure children stretch to match height */
     padding: 0; /* Remove padding to avoid white space */
-    margin-top: 80px; /* Add margin to push content below fixed header */
     width: 100%; /* Ensure the container takes full width */
 }
+
+
+.calendly-container {
+    display: none; /* Hidden by default */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.calendly-container.active {
+    display: block; /* Show when active */
+}
+
 
 #hero-image {
     flex: 7; /* Adjust flex to take up 70% of the width */
