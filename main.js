@@ -186,6 +186,5 @@ window.onload = function() {
         showPopup(); // Show popup after 1 second
     }, 1000);
 
-    showOreyoPopup(); // Existing Oreyo popup
     showAlertBanner(); // Show alert banner with sliding effect
 };
