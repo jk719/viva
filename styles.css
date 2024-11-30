@@ -25,6 +25,8 @@ html {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px; /* Add padding for better readability */
+    box-sizing: border-box;
 }
 
 .popup-overlay.active {
@@ -38,7 +40,11 @@ html {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
+    width: 100%; /* Ensure popup takes full width on smaller screens */
     text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling for overflow content */
+    max-height: 80vh; /* Limit height to 80% of the viewport */
 }
 
 .popup h2 {
@@ -50,6 +56,7 @@ html {
 .popup p {
     font-size: 1em;
     color: #333;
+    line-height: 1.4; /* Improve readability with better line spacing */
 }
 
 .popup button {
@@ -65,6 +72,27 @@ html {
 
 .popup button:hover {
     background-color: #00509e;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+    .popup {
+        max-width: 100%;
+        max-height: 90vh; /* Increase height limit for smaller screens */
+        padding: 15px; /* Reduce padding for better fit */
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+
+    .popup p {
+        font-size: 0.85em;
+        line-height: 1.2;
+    }
+
+    .popup button {
+        width: 100%; /* Make the button full width for easy tapping */
+        padding: 12px;
+        font-size: 1em;
+    }
 }
 
 
