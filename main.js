@@ -166,3 +166,26 @@ window.onload = function() {
     setTimeout(showOreyoPopup, 1000); // Show popup after 2 seconds the page has loaded
     showAlertBanner(); // Show alert banner with sliding effect
 };
+
+
+// Function to show the alert popup
+function showPopup() {
+    const popup = document.getElementById('alertPopup');
+    popup.classList.add('active');
+}
+
+// Function to close the alert popup
+function closePopup() {
+    const popup = document.getElementById('alertPopup');
+    popup.classList.remove('active');
+}
+
+// Show the popup when the page loads
+window.onload = function() {
+    setTimeout(() => {
+        showPopup(); // Show popup after 1 second
+    }, 1000);
+
+    showOreyoPopup(); // Existing Oreyo popup
+    showAlertBanner(); // Show alert banner with sliding effect
+};
