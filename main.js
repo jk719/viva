@@ -163,8 +163,25 @@ document.querySelectorAll('.btn-vaccine').forEach(button => {
 
 // Show the popup when the page loads
 window.onload = function() {
-    setTimeout(showOreyoPopup, 1000); // Show popup after 2 seconds the page has loaded
-    showAlertBanner(); // Show alert banner with sliding effect
+    // Check if user has already seen the popup
+    const hasSeenPopup = localStorage.getItem('holidayPopupSeen');
+    
+    if (!hasSeenPopup) {
+        setTimeout(() => {
+            showHolidayPopup();
+        }, 1000);
+    }
+
+    // Your existing onload functions
+    setTimeout(() => {
+        showOreyoPopup();
+    }, 1000);
+
+    setTimeout(() => {
+        showPopup();
+    }, 1000);
+
+    showAlertBanner();
 };
 
 
@@ -180,11 +197,17 @@ function closePopup() {
     popup.classList.remove('active');
 }
 
-// Show the popup when the page loads
-window.onload = function() {
-    setTimeout(() => {
-        showPopup(); // Show popup after 1 second
-    }, 1000);
+// Function to show holiday popup
+function showHolidayPopup() {
+    const popup = document.getElementById('holidayPopup');
+    popup.classList.add('active');
+}
 
-    showAlertBanner(); // Show alert banner with sliding effect
-};
+// Function to close holiday popup
+function closeHolidayPopup() {
+    const popup = document.getElementById('holidayPopup');
+    popup.classList.remove('active');
+    
+    // Optional: Set a cookie to remember that the user has seen the popup
+    localStorage.setItem('holidayPopupSeen', 'true');
+}

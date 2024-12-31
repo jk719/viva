@@ -17,16 +17,14 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    padding: 20px; /* Add padding for better readability */
-    box-sizing: border-box;
+    transition: opacity 0.3s ease;
 }
 
 .popup-overlay.active {
@@ -36,42 +34,40 @@ html {
 
 .popup {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    width: 100%; /* Ensure popup takes full width on smaller screens */
+    padding: 30px;
+    border-radius: 10px;
     text-align: center;
-    box-sizing: border-box;
-    overflow-y: auto; /* Enable scrolling for overflow content */
-    max-height: 80vh; /* Limit height to 80% of the viewport */
+    max-width: 400px;
+    width: 90%;
 }
 
 .popup h2 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #003366;
+    color: #D70040;
+    margin-bottom: 20px;
 }
 
-.popup p {
-    font-size: 1em;
-    color: #333;
-    line-height: 1.4; /* Improve readability with better line spacing */
+.holiday-hours {
+    margin: 20px 0;
+}
+
+.holiday-hours p {
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
 .popup button {
-    margin-top: 15px;
-    background-color: #003366;
+    background: #D70040;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
 }
 
 .popup button:hover {
-    background-color: #00509e;
+    background: #bb0040;
 }
 
 /* Mobile-specific styles */
