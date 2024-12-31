@@ -163,14 +163,10 @@ document.querySelectorAll('.btn-vaccine').forEach(button => {
 
 // Show the popup when the page loads
 window.onload = function() {
-    // Check if user has already seen the popup
-    const hasSeenPopup = localStorage.getItem('holidayPopupSeen');
-    
-    if (!hasSeenPopup) {
-        setTimeout(() => {
-            showHolidayPopup();
-        }, 1000);
-    }
+    // Show holiday popup every time
+    setTimeout(() => {
+        showHolidayPopup();
+    }, 1000);
 
     // Your existing onload functions
     setTimeout(() => {
@@ -207,7 +203,4 @@ function showHolidayPopup() {
 function closeHolidayPopup() {
     const popup = document.getElementById('holidayPopup');
     popup.classList.remove('active');
-    
-    // Optional: Set a cookie to remember that the user has seen the popup
-    localStorage.setItem('holidayPopupSeen', 'true');
 }
