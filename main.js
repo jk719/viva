@@ -165,7 +165,7 @@ document.querySelectorAll('.btn-vaccine').forEach(button => {
 window.onload = function() {
     // Show holiday popup every time
     setTimeout(() => {
-        showHolidayPopup();
+        showOreyoPopup();
     }, 1000);
 
     // Your existing onload functions
@@ -190,17 +190,5 @@ function showPopup() {
 // Function to close the alert popup
 function closePopup() {
     const popup = document.getElementById('alertPopup');
-    popup.classList.remove('active');
-}
-
-// Function to show holiday popup
-function showHolidayPopup() {
-    const popup = document.getElementById('holidayPopup');
-    popup.classList.add('active');
-}
-
-// Function to close holiday popup
-function closeHolidayPopup() {
-    const popup = document.getElementById('holidayPopup');
     popup.classList.remove('active');
 }
