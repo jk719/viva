@@ -46,17 +46,103 @@
         </nav>
     </header>
 
-    <!-- Compact Store Hours Banner -->
-    <div style="background: #f8f8f8; padding: 10px 0; text-align: center; border-bottom: 1px solid #e0e0e0; white-space: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;">
-        <div style="display: inline-block; font-size: 16px; color: #333; padding: 0 15px;">
-            <strong style="font-size: 17px;">HOURS:</strong> 
-            <span style="margin: 0 8px; white-space: nowrap;">Mon: 9:30AM-4:30PM</span> • 
-            <span style="margin: 0 8px; white-space: nowrap;">Tue-Thu: 9:30AM-3:30PM</span> • 
-            <span style="margin: 0 8px; white-space: nowrap;">Fri: 9:30AM-4:30PM</span> • 
-            <span style="margin: 0 8px; white-space: nowrap;">Sat-Sun: CLOSED</span>
-            <span style="margin-left: 10px; white-space: nowrap;">• <a href="sms:+16466535581" style="color: #e8c7b0; text-decoration: none; font-weight: bold; font-size: 15px;">AFTER HOURS TEXT (646) 653-5581</a></span>
+    <!-- Store Hours Alert Banner -->
+    <div id="store-hours-banner" style="background: #FFD700; padding: 8px 0; border-bottom: 2px solid #D70040; position: fixed; top: 0; width: 100%; z-index: 2000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-size: 14px;">
+                <div style="display: flex; align-items: center; background: rgba(255,255,255,0.9); padding: 5px 12px; border-radius: 4px; margin-right: 5px;">
+                    <span style="color: #D70040; font-weight: 700; margin-right: 8px;">🕒</span>
+                    <span style="font-weight: 700; color: #404040;">STORE HOURS:</span>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5px 15px; background: rgba(255,255,255,0.8); padding: 5px 12px; border-radius: 4px;">
+                    <span style="white-space: nowrap;">
+                        <span style="font-weight: 700; color: #404040;">Mon:</span> 9:30AM-4:30PM</span>
+                    <span style="white-space: nowrap;">
+                        <span style="font-weight: 700; color: #404040;">Tue-Thu:</span> 9:30AM-3:30PM</span>
+                    <span style="white-space: nowrap;">
+                        <span style="font-weight: 700; color: #404040;">Fri:</span> 9:30AM-4:30PM</span>
+                    <span style="white-space: nowrap; color: #D70040; font-weight: 700;">
+                        Sat-Sun: CLOSED</span>
+                </div>
+                <a href="sms:+16466535581" 
+                   style="white-space: nowrap; 
+                          background: #D70040; 
+                          color: white !important; 
+                          text-decoration: none; 
+                          font-weight: 700; 
+                          font-size: 13px;
+                          padding: 5px 12px;
+                          border-radius: 4px;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                          transition: all 0.2s ease;
+                          border: none;
+                          margin-left: 5px;
+                          text-transform: uppercase;
+                          letter-spacing: 0.5px;">
+                    <span>📱</span> AFTER HOURS: (646) 653-5581
+                </a>
+            </div>
         </div>
     </div>
+    <style>
+        @media (max-width: 900px) {
+            #store-hours-banner > div > div {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            #store-hours-banner .hours-container {
+                order: 2;
+                flex: 1 1 100%;
+                justify-content: center;
+                padding: 5px 0;
+            }
+            #store-hours-banner a {
+                order: 1;
+                margin: 0;
+                flex: 0 0 auto;
+            }
+            #store-hours-banner > div > div > div:first-child {
+                order: 0;
+                margin-right: 0;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            #store-hours-banner {
+                padding: 6px 0;
+            }
+            #store-hours-banner > div > div {
+                gap: 6px;
+                font-size: 13px;
+            }
+            #store-hours-banner .hours-container {
+                flex-wrap: wrap;
+                gap: 3px 10px;
+            }
+            #store-hours-banner a {
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+        }
+        
+        #store-hours-banner a:hover {
+            background: #b30035;
+            transform: translateY(-1px);
+        }
+        
+        /* Adjust body padding to account for fixed banner */
+        body {
+            padding-top: 140px; /* Increased to accommodate both banner and header */
+        }
+        
+        /* Ensure header stays below the banner */
+        header {
+            top: 40px !important;
+        }
+    </style>
 
     <!-- Oreyo Chatbot Popup -->
     <!-- <div id="oreyo-popup" class="oreyo-popup">
